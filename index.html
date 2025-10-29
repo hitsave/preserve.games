@@ -8,24 +8,47 @@
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1 class="title">preserve.games</h1>
-            <p class="subtitle">A gateway into the world of video game preservation</p>
+        <header class="site-header">
+            <div class="brand">preserve.games</div>
+            <nav class="nav">
+                <a href="#organizations">Organizations</a>
+                <a href="#guides">Guides</a>
+                <a href="#databases">Databases</a>
+            </nav>
         </header>
 
-        <main>
-            <section class="intro">
-                <p class="intro-text">
-                    Video game preservation is crucial for maintaining our digital cultural heritage. 
-                    This portal connects you with organizations, guides, and resources dedicated to 
-                    preserving the history and culture of video games for future generations.
-                </p>
-            </section>
+        <section class="hero">
+            <h1 class="hero-title">preserve.games</h1>
+            <p class="hero-subtitle">A gateway into the world of video game preservation</p>
+            <p class="hero-text">
+                Video game preservation is crucial for maintaining our digital cultural heritage. This portal connects you with organizations, guides, and resources dedicated to preserving the history and culture of video games for future generations.
+            </p>
+            <div class="hero-actions">
+                <a href="#organizations" class="button">Explore organizations ↓</a>
+                <a href="#guides" class="button button">View guides ↓</a>
+                <a href="#databases" class="button button">Community databases ↓</a>
+            </div>
+        </section>
 
-            <section class="organizations">
+        <main>
+
+            <section class="organizations" id="organizations">
                 <h2>Preservation Organizations</h2>
+                <div class="filter-bar" aria-label="Filter organizations">
+                    <div class="filter-chips" role="tablist">
+                        <button class="chip is-active" data-continent="all" role="tab" aria-selected="true">All</button>
+                        <button class="chip" data-continent="africa" role="tab">Africa</button>
+                        <button class="chip" data-continent="asia" role="tab">Asia</button>
+                        <button class="chip" data-continent="europe" role="tab">Europe</button>
+                        <button class="chip" data-continent="north-america" role="tab">North America</button>
+                        <button class="chip" data-continent="south-america" role="tab">South America</button>
+                        <button class="chip" data-continent="oceania" role="tab">Oceania</button>
+                        <button class="chip" data-continent="global" role="tab">Global</button>
+                    </div>
+                    <input type="search" class="filter-search" placeholder="Search organizations…" aria-label="Search organizations">
+                </div>
                 <div class="cards-grid">
-                    <div class="card" data-org="vghf">
+                    <div class="card" data-org="vghf" data-continent="north-america" data-name="Video Game History Foundation VGHF">
                         <img src="assets/logos/vghf.svg" alt="VGHF logo" class="card-logo" onerror="this.style.display='none'">
                         <h3>Video Game History Foundation (VGHF)</h3>
                         <p>Preserves, celebrates, and teaches the history of video games through documentation and archival work.</p>
@@ -34,7 +57,7 @@
                         </a>
                     </div>
 
-                    <div class="card" data-org="hitsave">
+                    <div class="card" data-org="hitsave" data-continent="north-america" data-name="Hit Save">
                         <img src="assets/logos/hitsave.png" alt="Hit Save! logo" class="card-logo" onerror="this.style.display='none'">
                         <h3>Hit Save!</h3>
                         <p>A non-profit organization dedicated to preserving video games, their history, and related materials.</p>
@@ -43,7 +66,7 @@
                         </a>
                     </div>
 
-                    <div class="card" data-org="gps">
+                    <div class="card" data-org="gps" data-continent="asia" data-name="Game Preservation Society GPS">
                         <img src="assets/logos/gps.svg" alt="Game Preservation Society logo" class="card-logo" onerror="this.style.display='none'">
                         <h3>Game Preservation Society</h3>
                         <p>Focused on preserving video game culture and history, particularly in Japan and the wider gaming community.</p>
@@ -52,7 +75,7 @@
                         </a>
                     </div>
 
-                    <div class="card" data-org="mo5">
+                    <div class="card" data-org="mo5" data-continent="europe" data-name="MO5">
                         <img src="assets/logos/mo5.png" alt="MO5 logo" class="card-logo" onerror="this.style.display='none'">
                         <h3>MO5</h3>
                         <p>A French association dedicated to the preservation and dissemination of digital, video game, and computer heritage.</p>
@@ -61,7 +84,7 @@
                         </a>
                     </div>
 
-                    <div class="card" data-org="herni">
+                    <div class="card" data-org="herni" data-continent="europe" data-name="Herni Historie Herní Historie">
                         <img src="assets/logos/herni.svg" alt="Herní Historie logo" class="card-logo" onerror="this.style.display='none'">
                         <h3>Herní Historie</h3>
                         <p>A Czech initiative focused on documenting and preserving the history of video games and their cultural impact.</p>
@@ -69,10 +92,205 @@
                             Visit Herní Historie →
                         </a>
                     </div>
+
+                    <div class="card" data-continent="europe" data-name="BNF Bibliotheque nationale de France">
+                        <img src="assets/logos/bnf.png" alt="BNF logo" class="card-logo" onerror="this.style.display='none'">
+                        <h3>Bibliothèque nationale de France (BnF)</h3>
+                        <p>France’s national library with legal deposit collections including video game materials.</p>
+                        <a href="https://www.bnf.fr" target="_blank" rel="noopener noreferrer" class="card-link">Visit BnF →</a>
+                    </div>
+
+                    <div class="card" data-continent="europe" data-name="Silicium">
+                        <img src="assets/logos/silicium.png" alt="Silicium logo" class="card-logo" onerror="this.style.display='none'">
+                        <h3>Silicium</h3>
+                        <p>French association preserving computing and video game heritage.</p>
+                        <a href="https://silicium.org" target="_blank" rel="noopener noreferrer" class="card-link">Visit Silicium →</a>
+                    </div>
+
+                    <div class="card" data-continent="europe" data-name="OrdiRetro">
+                        <img src="assets/logos/ordiretro.png" alt="OrdiRetro logo" class="card-logo" onerror="this.style.display='none'">
+                        <h3>OrdiRetro</h3>
+                        <p>French association promoting and preserving retro computing and video games.</p>
+                        <a href="https://www.ordiretro.fr" target="_blank" rel="noopener noreferrer" class="card-link">Visit OrdiRetro →</a>
+                    </div>
+
+                    <div class="card" data-continent="europe" data-name="Musee Bolo Musée Bolo">
+                        <img src="assets/logos/musee-bolo.png" alt="Musée Bolo logo" class="card-logo" onerror="this.style.display='none'">
+                        <h3>Musée Bolo</h3>
+                        <p>Swiss museum dedicated to computer history and digital culture.</p>
+                        <a href="https://www.museebolo.ch" target="_blank" rel="noopener noreferrer" class="card-link">Visit Musée Bolo →</a>
+                    </div>
+
+                    <div class="card" data-continent="europe" data-name="Computerspielemuseum ComputerSpiele Museum">
+                        <img src="assets/logos/computerspielemuseum.png" alt="Computerspielemuseum logo" class="card-logo" onerror="this.style.display='none'">
+                        <h3>Computerspielemuseum</h3>
+                        <p>Berlin museum exploring the culture and history of video games.</p>
+                        <a href="https://www.computerspielemuseum.de" target="_blank" rel="noopener noreferrer" class="card-link">Visit Computerspielemuseum →</a>
+                    </div>
+
+                    <div class="card" data-continent="europe" data-name="GAMM Game Museum VIGAMUS Rome">
+                        <img src="assets/logos/gamm.png" alt="GAMM – Game Museum logo" class="card-logo" onerror="this.style.display='none'">
+                        <h3>GAMM – Game Museum</h3>
+                        <p>Rome’s reimagined video game museum offering immersive, interactive exhibits and preserved artifacts.</p>
+                        <a href="https://www.gammuseum.com/en/" target="_blank" rel="noopener noreferrer" class="card-link">Visit GAMM →</a>
+                    </div>
+
+                    <div class="card" data-continent="asia" data-name="Nexon Computer Museum">
+                        <img src="assets/logos/nexon-computer-museum.png" alt="Nexon Computer Museum logo" class="card-logo" onerror="this.style.display='none'">
+                        <h3>Nexon Computer Museum</h3>
+                        <p>Jeju, South Korea museum dedicated to computer and game history.</p>
+                        <a href="https://www.nexoncomputermuseum.org" target="_blank" rel="noopener noreferrer" class="card-link">Visit NCM →</a>
+                    </div>
+
+                    <div class="card" data-continent="north-america" data-name="Strong National Museum of Play">
+                        <img src="assets/logos/strong.png" alt="The Strong Museum logo" class="card-logo" onerror="this.style.display='none'">
+                        <h3>The Strong National Museum of Play</h3>
+                        <p>US museum with extensive collections and research on games and play.</p>
+                        <a href="https://www.museumofplay.org" target="_blank" rel="noopener noreferrer" class="card-link">Visit The Strong →</a>
+                    </div>
+
+                    <div class="card" data-continent="europe" data-name="National Videogame Museum UK NVM thenvm">
+                        <img src="assets/logos/nvm-uk.png" alt="National Videogame Museum logo" class="card-logo" onerror="this.style.display='none'">
+                        <h3>National Videogame Museum (UK)</h3>
+                        <p>UK museum celebrating and preserving video game culture.</p>
+                        <a href="https://thenvm.org" target="_blank" rel="noopener noreferrer" class="card-link">Visit NVM (UK) →</a>
+                    </div>
+
+                    <div class="card" data-continent="north-america" data-name="Computer History Museum CHM">
+                        <img src="assets/logos/chm.png" alt="Computer History Museum logo" class="card-logo" onerror="this.style.display='none'">
+                        <h3>Computer History Museum</h3>
+                        <p>Global museum dedicated to preserving and presenting computing history through artifacts and oral histories.</p>
+                        <a href="https://computerhistory.org" target="_blank" rel="noopener noreferrer" class="card-link">Visit CHM →</a>
+                    </div>
+
+                    <div class="card" data-continent="north-america" data-name="MADE Museum of Art and Digital Entertainment">
+                        <img src="assets/logos/made.png" alt="The MADE logo" class="card-logo" onerror="this.style.display='none'">
+                        <h3>The MADE</h3>
+                        <p>Museum of Art and Digital Entertainment focused on game preservation and education.</p>
+                        <a href="https://themade.org" target="_blank" rel="noopener noreferrer" class="card-link">Visit The MADE →</a>
+                    </div>
+
+                    <div class="card" data-continent="europe" data-name="Beeld en Geluid Sound and Vision NL">
+                        <img src="assets/logos/beeld-en-geluid.png" alt="Sound and Vision logo" class="card-logo" onerror="this.style.display='none'">
+                        <h3>Sound and Vision (Beeld & Geluid)</h3>
+                        <p>The Netherlands Institute for Sound and Vision with game-related collections.</p>
+                        <a href="https://www.beeldengeluid.nl" target="_blank" rel="noopener noreferrer" class="card-link">Visit Sound and Vision →</a>
+                    </div>
+
+                    <div class="card" data-continent="europe" data-name="HomeComputerMuseum">
+                        <img src="assets/logos/homecomputermuseum.png" alt="HomeComputerMuseum logo" class="card-logo" onerror="this.style.display='none'">
+                        <h3>HomeComputerMuseum</h3>
+                        <p>Dutch museum preserving personal computing history and software.</p>
+                        <a href="https://www.homecomputermuseum.nl" target="_blank" rel="noopener noreferrer" class="card-link">Visit HomeComputerMuseum →</a>
+                    </div>
+
+                    <div class="card" data-continent="europe" data-name="Royal Library Denmark KB">
+                        <img src="assets/logos/kb-dk.png" alt="Royal Library of Denmark logo" class="card-logo" onerror="this.style.display='none'">
+                        <h3>Royal Library of Denmark</h3>
+                        <p>National library of Denmark including digital legal deposit collections.</p>
+                        <a href="https://www.kb.dk" target="_blank" rel="noopener noreferrer" class="card-link">Visit KB →</a>
+                    </div>
+
+                    <div class="card" data-continent="europe" data-name="National Library of Sweden KB SE">
+                        <img src="assets/logos/kb-se.png" alt="National Library of Sweden logo" class="card-logo" onerror="this.style.display='none'">
+                        <h3>National Library of Sweden</h3>
+                        <p>Sweden’s national library with legal deposit of games and multimedia.</p>
+                        <a href="https://www.kb.se" target="_blank" rel="noopener noreferrer" class="card-link">Visit KB (SE) →</a>
+                    </div>
+
+                    <div class="card" data-continent="europe" data-name="Centre for Computing History CCH">
+                        <img src="assets/logos/cch.png" alt="Centre for Computing History logo" class="card-logo" onerror="this.style.display='none'">
+                        <h3>Centre for Computing History</h3>
+                        <p>UK museum and archive dedicated to the past and future of computing.</p>
+                        <a href="https://www.computinghistory.org.uk" target="_blank" rel="noopener noreferrer" class="card-link">Visit CCH →</a>
+                    </div>
+
+                    <div class="card" data-continent="asia" data-name="Ritsumeikan University RCGS">
+                        <img src="assets/logos/rcgs.png" alt="RCGS logo" class="card-logo" onerror="this.style.display='none'">
+                        <h3>Ritsumeikan Center for Game Studies</h3>
+                        <p>Academic center in Japan researching and preserving game culture and materials.</p>
+                        <a href="https://www.rcgs.jp" target="_blank" rel="noopener noreferrer" class="card-link">Visit RCGS →</a>
+                    </div>
+
+                    <div class="card" data-continent="europe" data-name="Finnish Museum of Games">
+                        <img src="assets/logos/finnish-museum-of-games.png" alt="The Finnish Museum of Games logo" class="card-logo" onerror="this.style.display='none'">
+                        <h3>The Finnish Museum of Games</h3>
+                        <p>Museum in Tampere dedicated to Finnish gaming history.</p>
+                        <a href="https://www.vapriikki.fi/en/exhibition/the-finnish-museum-of-games/" target="_blank" rel="noopener noreferrer" class="card-link">Visit Finnish Museum of Games →</a>
+                    </div>
+
+                    <div class="card" data-continent="europe" data-name="SUBOTRON Austria">
+                        <img src="assets/logos/subotron.png" alt="SUBOTRON logo" class="card-logo" onerror="this.style.display='none'">
+                        <h3>SUBOTRON</h3>
+                        <p>Vienna-based platform for game culture, education, and preservation.</p>
+                        <a href="https://subotron.com" target="_blank" rel="noopener noreferrer" class="card-link">Visit SUBOTRON →</a>
+                    </div>
+
+                    <div class="card" data-continent="europe" data-name="CNJV Conservatoire National du Jeu Vidéo France">
+                        <img src="assets/logos/cnjv.png" alt="CNJV logo" class="card-logo" onerror="this.style.display='none'">
+                        <h3>Conservatoire National du Jeu Vidéo (CNJV)</h3>
+                        <p>French conservatory dedicated to preserving and promoting the nation’s video game heritage.</p>
+                        <a href="https://www.cnjv.fr/" target="_blank" rel="noopener noreferrer" class="card-link">Visit CNJV →</a>
+                    </div>
+
+                    <div class="card" data-continent="europe" data-name="WDA France">
+                        <img src="assets/logos/wda.png" alt="WDA logo" class="card-logo" onerror="this.style.display='none'">
+                        <h3>WDA</h3>
+                        <p>French association engaged in archiving and documenting digital and video game heritage.</p>
+                        <a href="https://www.wda-fr.org/" target="_blank" rel="noopener noreferrer" class="card-link">Visit WDA →</a>
+                    </div>
+
+                    
+
+                    
+
+                    <div class="card" data-continent="asia" data-name="CCF Computer Museum China CCF">
+                        <img src="assets/logos/ccfcm.png" alt="CCF Computer Museum logo" class="card-logo" onerror="this.style.display='none'">
+                        <h3>CCF Computer Museum</h3>
+                        <p>Computer museum supported by CCF preserving China’s computing history and artifacts.</p>
+                        <a href="http://ccfcm.org.cn/" target="_blank" rel="noopener noreferrer" class="card-link">Visit CCF Computer Museum →</a>
+                    </div>
+
+                    <div class="card" data-continent="africa" data-name="Vintage Computing Group of South Africa VCGSA" data-type="community">
+                        <img src="assets/logos/vcgsa.png" alt="VCGSA logo" class="card-logo" onerror="this.style.display='none'">
+                        <h3>Vintage Computing Group of South Africa</h3>
+                        <p>Community preserving, restoring, and sharing South Africa’s vintage computing heritage.</p>
+                        <a href="https://www.vcgsa.co.za/" target="_blank" rel="noopener noreferrer" class="card-link">Visit VCGSA →</a>
+                    </div>
+
+                    <div class="card" data-continent="asia" data-name="Soviet Arcade Machines Museum RU Moscow St Petersburg">
+                        <img src="assets/logos/soviet-arcade.png" alt="Museum of Soviet Arcade Machines logo" class="card-logo" onerror="this.style.display='none'">
+                        <h3>Museum of Soviet Arcade Machines</h3>
+                        <p>Hands-on museum featuring restored arcade machines from the Soviet era.</p>
+                        <a href="https://15kop.ru/en/" target="_blank" rel="noopener noreferrer" class="card-link">Visit the museum →</a>
+                    </div>
+
+                    
+
+                    
+
+                    <div class="card" data-continent="europe" data-name="PEEK&POKE Computer Museum Croatia Rijeka">
+                        <img src="assets/logos/peekpoke.png" alt="PEEK&POKE Computer Museum logo" class="card-logo" onerror="this.style.display='none'">
+                        <h3>PEEK&POKE Computer Museum</h3>
+                        <p>Rijeka, Croatia museum dedicated to vintage computing and digital culture.</p>
+                        <a href="https://www.peekpoke.hr/" target="_blank" rel="noopener noreferrer" class="card-link">Visit PEEK&POKE →</a>
+                    </div>
+
+                    
+
+                    <div class="card" data-continent="europe" data-name="Arcade Planet Spain Valencia">
+                        <img src="assets/logos/arcadeplanet.png" alt="Arcade Planet logo" class="card-logo" onerror="this.style.display='none'">
+                        <h3>Arcade Planet</h3>
+                        <p>Spain’s large arcade and preservation project with playable cabinets and exhibits.</p>
+                        <a href="https://arcadeplanet.es/" target="_blank" rel="noopener noreferrer" class="card-link">Visit Arcade Planet →</a>
+                    </div>
+                </div>
+                <div class="show-more-wrap">
+                    <button id="show-more-orgs" class="button button-secondary" aria-expanded="false">Show more</button>
                 </div>
             </section>
 
-            <section class="guides">
+            <section class="guides" id="guides">
                 <h2>Preservation Guides</h2>
                 <div class="cards-grid">
                     <div class="card">
@@ -101,10 +319,19 @@
                             Visit preservation.guide →
                         </a>
                     </div>
+
+                    <div class="card">
+                        <img src="assets/logos/restore-and-replay.png" alt="Restore and Replay (Eldoug) logo" class="card-logo" onerror="this.style.display='none'">
+                        <h3>Restore and Replay (Eldoug)</h3>
+                        <p>Expert video guides on cleaning, repairing, and restoring game media, systems, and more.</p>
+                        <a href="https://www.youtube.com/@RestoreAndReplay" target="_blank" rel="noopener noreferrer" class="card-link">
+                            Visit the YouTube channel →
+                        </a>
+                    </div>
                 </div>
             </section>
 
-            <section class="databases">
+            <section class="databases" id="databases">
                 <h2>Community Databases</h2>
                 <div class="cards-grid">
                     <div class="card" data-org="nointro">
@@ -132,5 +359,71 @@
             <p>&copy; 2024 preserve.games - Connecting the video game preservation community</p>
         </footer>
     </div>
+    <script>
+    (function() {
+        const chips = document.querySelectorAll('.chip');
+        const search = document.querySelector('.filter-search');
+        const cards = Array.from(document.querySelectorAll('#organizations .cards-grid .card'));
+        const showMoreBtn = document.getElementById('show-more-orgs');
+        const MAX_DEFAULT = 6;
+        let forceShowAll = false;
+
+        function applyFilters() {
+            const activeChip = document.querySelector('.chip.is-active');
+            const continent = activeChip ? activeChip.getAttribute('data-continent') : 'all';
+            const q = (search?.value || '').trim().toLowerCase();
+
+            // First, apply continent/text filters
+            cards.forEach(card => {
+                const cardCont = card.getAttribute('data-continent') || 'global';
+                const name = (card.getAttribute('data-name') || card.querySelector('h3')?.textContent || '').toLowerCase();
+                const matchCont = continent === 'all' || continent === cardCont;
+                const matchText = q === '' || name.includes(q);
+                card.style.display = (matchCont && matchText) ? '' : 'none';
+            });
+
+            // Then cap to MAX_DEFAULT only for default view (All + empty search)
+            const isDefaultView = continent === 'all' && q === '';
+            const visibleCards = cards.filter(c => c.style.display !== 'none');
+            if (isDefaultView && !forceShowAll && visibleCards.length > MAX_DEFAULT) {
+                visibleCards.forEach((c, i) => {
+                    c.style.display = i < MAX_DEFAULT ? '' : 'none';
+                });
+                if (showMoreBtn) {
+                    showMoreBtn.style.display = '';
+                    showMoreBtn.setAttribute('aria-expanded', 'false');
+                }
+            } else {
+                if (showMoreBtn) {
+                    showMoreBtn.style.display = 'none';
+                }
+            }
+        }
+
+        chips.forEach(chip => {
+            chip.addEventListener('click', () => {
+                chips.forEach(c => c.classList.remove('is-active'));
+                chip.classList.add('is-active');
+                forceShowAll = false; // reset on filter change
+                applyFilters();
+            });
+        });
+
+        if (search) {
+            search.addEventListener('input', applyFilters);
+        }
+
+        if (showMoreBtn) {
+            showMoreBtn.addEventListener('click', () => {
+                forceShowAll = true;
+                applyFilters();
+                showMoreBtn.setAttribute('aria-expanded', 'true');
+            });
+        }
+
+        // Initial cap on load
+        applyFilters();
+    })();
+    </script>
 </body>
 </html>
