@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build index.html from data/site.yaml and dev.template.html."""
+"""Build dev.html from data/site.yaml and dev.template.html."""
 
 import html
 from pathlib import Path
@@ -9,7 +9,7 @@ import yaml
 ROOT = Path(__file__).resolve().parent.parent
 DATA_FILE = ROOT / "data" / "site.yaml"
 TEMPLATE_FILE = ROOT / "dev.template.html"
-OUTPUT_FILE = ROOT / "index.html"
+OUTPUT_FILE = ROOT / "dev.html"
 
 
 def esc(text: str) -> str:
