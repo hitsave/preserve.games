@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body data-site-title="{{title}}">
+    <div class="container">
+        <header class="site-header">
+            <a href="#home" class="brand">preserve.games</a>
+            <nav class="nav">
+                <a href="#organizations" class="button nav-button" data-nav="organizations">Organizations</a>
+                <a href="#guides" class="button nav-button" data-nav="guides">Guides</a>
+                <a href="#databases" class="button nav-button" data-nav="databases">Databases</a>
+                <a href="#opensource" class="button nav-button" data-nav="opensource">Open Source</a>
+                <a href="#resources" class="button nav-button" data-nav="resources">Resources</a>
+                <a href="#unreleased" class="button nav-button" data-nav="unreleased">Unreleased</a>
+            </nav>
+        </header>
+
+        <main>
+            <section class="page page-home" data-page="home">
+                <div class="hero hero-splash">
+                    <p class="hero-eyebrow">Video Game Preservation Portal</p>
+                    <h1 class="hero-title">{{hero_title}}</h1>
+                    <p class="hero-subtitle">{{hero_subtitle}}</p>
+                    <div class="hero-stats">
+{{hero_stats}}
+                    </div>
+                    <div class="marquee-wrap" aria-label="Featured preservation organizations and resources">
+{{marquee_orgs}}
+{{marquee_community}}
+                    </div>
+                    <p class="hero-text">{{hero_text}}</p>
+                    <div class="hero-actions">
+                        <a href="#organizations" class="button">Organizations →</a>
+                        <a href="#guides" class="button">Guides →</a>
+                        <a href="#databases" class="button">Databases →</a>
+                        <a href="#opensource" class="button">Open Source →</a>
+                        <a href="#resources" class="button">Resources →</a>
+                        <a href="#unreleased" class="button">Unreleased →</a>
+                    </div>
+                </div>
+            </section>
+
+            <section class="page organizations" data-page="organizations" hidden>
+                <h2>Preservation Organizations</h2>
+                <div class="filter-bar" aria-label="Filter organizations">
+                    <div class="filter-chips" role="tablist">
+{{continents}}
+                    </div>
+                    <input type="search" class="filter-search" placeholder="Search organizations…" aria-label="Search organizations">
+                </div>
+                <div class="cards-grid">
+{{organizations}}
+                </div>
+            </section>
+
+            <section class="page guides" data-page="guides" hidden>
+                <h2>Preservation Guides</h2>
+                <div class="cards-grid">
+{{guides}}
+                </div>
+            </section>
+
+            <section class="page databases" data-page="databases" hidden>
+                <h2>Community Databases</h2>
+                <div class="cards-grid">
+{{databases}}
+                </div>
+            </section>
+
+            <section class="page opensource" data-page="opensource" hidden>
+                <h2>Open Source Projects</h2>
+                <h3 class="subheading">Emulators</h3>
+                <div class="cards-grid">
+{{opensource_emulators}}
+                </div>
+                <h3 class="subheading">Dumping Tools</h3>
+                <div class="cards-grid">
+{{opensource_tools}}
+                </div>
+            </section>
+
+            <section class="page resources" data-page="resources" hidden>
+                <h2>Research &amp; Documentation Resources</h2>
+                <div class="cards-grid">
+{{resources}}
+                </div>
+            </section>
+
+            <section class="page unreleased" data-page="unreleased" hidden>
+                <h2>Unreleased Games &amp; Beta Archives</h2>
+                <div class="cards-grid">
+{{unreleased}}
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>{{footer}}</p>
+            {{footer_credit}}
+        </footer>
+    </div>
+    <script src="js/app.js"></script>
+    <script src="js/filters.js"></script>
+</body>
+</html>
