@@ -2,17 +2,45 @@
     const pages = document.querySelectorAll('.page');
     const navLinks = document.querySelectorAll('[data-nav]');
     const siteTitle = document.body.dataset.siteTitle || 'preserve.games';
-    const routes = new Set(['home', 'organizations', 'guides', 'databases', 'opensource', 'resources', 'unreleased']);
+    const routes = new Set(['home', 'organizations', 'visit-in-person', 'guides', 'opensource', 'resources']);
 
     const pageTitles = {
         home: siteTitle,
-        organizations: 'Organizations — preserve.games',
-        guides: 'Guides — preserve.games',
-        databases: 'Databases — preserve.games',
-        opensource: 'Open Source — preserve.games',
-        resources: 'Resources — preserve.games',
-        unreleased: 'Unreleased & Beta — preserve.games',
+        organizations: 'Organizations | preserve.games',
+        'visit-in-person': 'Visit in Person | preserve.games',
+        guides: 'Guides | preserve.games',
+        opensource: 'Open Source | preserve.games',
+        resources: 'Resources | preserve.games',
     };
+
+    function initHeroTagline() {
+        const taglineEl = document.getElementById('hero-tagline');
+        const dataEl = document.getElementById('hero-taglines');
+        if (!taglineEl || !dataEl) {
+            return;
+        }
+
+        let taglines;
+        try {
+            taglines = JSON.parse(dataEl.textContent || '[]');
+        } catch {
+            return;
+        }
+
+        if (!Array.isArray(taglines) || taglines.length <= 1) {
+            return;
+        }
+
+        const pick = taglines[Math.floor(Math.random() * taglines.length)];
+        const lines = pick?.lines;
+        if (!Array.isArray(lines) || !lines.length) {
+            return;
+        }
+
+        taglineEl.innerHTML = lines
+            .map(line => `<span class="hero-tagline-line">${line.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')}</span>`)
+            .join('');
+    }
 
     function getRoute() {
         const hash = location.hash.slice(1);
@@ -33,6 +61,8 @@
     }
 
     window.addEventListener('hashchange', () => showPage(getRoute()));
+
+    initHeroTagline();
 
     if (!location.hash || !routes.has(location.hash.slice(1))) {
         location.replace('#home');

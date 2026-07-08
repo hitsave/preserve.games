@@ -15,7 +15,7 @@ ROOT = Path(__file__).resolve().parent.parent
 DATA_FILE = ROOT / "data" / "site.yaml"
 LOGOS_DIR = ROOT / "assets" / "logos"
 USER_AGENT = "Mozilla/5.0 (compatible; preserve.games-logo-fetch/1.0)"
-SECTIONS = ("organizations", "guides", "databases", "resources", "unreleased")
+SECTIONS = ("organizations", "guides", "resources")
 OPENSOURCE_GROUPS = ("emulators", "dumping_tools")
 
 

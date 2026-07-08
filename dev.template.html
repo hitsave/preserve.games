@@ -12,33 +12,34 @@
             <a href="#home" class="brand">preserve.games</a>
             <nav class="nav">
                 <a href="#organizations" class="button nav-button" data-nav="organizations">Organizations</a>
+                <a href="#visit-in-person" class="button nav-button" data-nav="visit-in-person">Visit in Person</a>
                 <a href="#guides" class="button nav-button" data-nav="guides">Guides</a>
-                <a href="#databases" class="button nav-button" data-nav="databases">Databases</a>
                 <a href="#opensource" class="button nav-button" data-nav="opensource">Open Source</a>
                 <a href="#resources" class="button nav-button" data-nav="resources">Resources</a>
-                <a href="#unreleased" class="button nav-button" data-nav="unreleased">Unreleased</a>
             </nav>
         </header>
 
         <main>
             <section class="page page-home" data-page="home">
                 <div class="hero hero-splash">
-                    <h1 class="hero-title">{{hero_title}}</h1>
-                    <p class="hero-subtitle">{{hero_subtitle}}</p>
-                    <div class="hero-stats">
-{{hero_stats}}
+                    <h1 class="hero-tagline" id="hero-tagline" aria-live="polite">{{hero_tagline_default}}</h1>
+                    <script type="application/json" id="hero-taglines">{{hero_taglines_json}}</script>
+                    <div class="hero-blurb">
+{{hero_blurb}}
                     </div>
                     <div class="marquee-wrap" aria-label="Featured preservation organizations and resources">
 {{marquee_orgs}}
 {{marquee_community}}
                     </div>
-                    <p class="hero-text">{{hero_text}}</p>
+                    <div class="hero-stats" aria-label="Site statistics">
+{{hero_stats}}
+                    </div>
                 </div>
             </section>
 
             <section class="page organizations" data-page="organizations" hidden>
                 <h2>Preservation Organizations</h2>
-                <div class="filter-bar" aria-label="Filter organizations">
+                <div class="filter-bar" data-filterable data-chip-attr="continent" aria-label="Filter organizations">
                     <div class="filter-chips" role="tablist">
 {{continents}}
                     </div>
@@ -49,6 +50,20 @@
                 </div>
             </section>
 
+            <section class="page visit-in-person" data-page="visit-in-person" hidden>
+                <h2>Visit in Person</h2>
+                <p class="page-lead">Museums and national libraries you can visit to explore video game history firsthand.</p>
+                <div class="filter-bar" data-filterable data-chip-attr="continent" aria-label="Filter visitable locations">
+                    <div class="filter-chips" role="tablist">
+{{visit_continents}}
+                    </div>
+                    <input type="search" class="filter-search" placeholder="Search locations…" aria-label="Search locations">
+                </div>
+                <div class="cards-grid">
+{{visit_in_person}}
+                </div>
+            </section>
+
             <section class="page guides" data-page="guides" hidden>
                 <h2>Preservation Guides</h2>
                 <div class="cards-grid">
@@ -56,36 +71,29 @@
                 </div>
             </section>
 
-            <section class="page databases" data-page="databases" hidden>
-                <h2>Community Databases</h2>
-                <div class="cards-grid">
-{{databases}}
-                </div>
-            </section>
-
             <section class="page opensource" data-page="opensource" hidden>
                 <h2>Open Source Projects</h2>
-                <h3 class="subheading">Emulators</h3>
-                <div class="cards-grid">
-{{opensource_emulators}}
+                <div class="filter-bar" data-filterable data-chip-attr="category" aria-label="Filter open source projects">
+                    <div class="filter-chips" role="tablist">
+{{opensource_categories}}
+                    </div>
+                    <input type="search" class="filter-search" placeholder="Search projects…" aria-label="Search open source projects">
                 </div>
-                <h3 class="subheading">Dumping Tools</h3>
                 <div class="cards-grid">
-{{opensource_tools}}
+{{opensource}}
                 </div>
             </section>
 
             <section class="page resources" data-page="resources" hidden>
-                <h2>Research &amp; Documentation Resources</h2>
+                <h2>Resources</h2>
+                <div class="filter-bar" data-filterable data-chip-attr="category" aria-label="Filter resources">
+                    <div class="filter-chips" role="tablist">
+{{resource_categories}}
+                    </div>
+                    <input type="search" class="filter-search" placeholder="Search resources…" aria-label="Search resources">
+                </div>
                 <div class="cards-grid">
 {{resources}}
-                </div>
-            </section>
-
-            <section class="page unreleased" data-page="unreleased" hidden>
-                <h2>Unreleased Games &amp; Beta Archives</h2>
-                <div class="cards-grid">
-{{unreleased}}
                 </div>
             </section>
         </main>

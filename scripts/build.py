@@ -2,6 +2,7 @@
 """Build dev.html from data/site.yaml and dev.template.html."""
 
 import html
+import json
 from pathlib import Path
 
 import yaml
@@ -38,16 +39,20 @@ def render_org_card(org: dict) -> str:
                     </a>"""
 
 
-def render_card(item: dict) -> str:
-    return f"""                    <a href="{esc(item["url"])}" target="_blank" rel="noopener noreferrer" class="card">{render_logo(item)}
+def render_card(item: dict, *, category_attr: str | None = None) -> str:
+    attrs_parts = []
+    if category_attr and item.get("category"):
+        attrs_parts.append(f'data-{category_attr}="{esc(item["category"])}"')
+    attrs = f' {" ".join(attrs_parts)}' if attrs_parts else ""
+    return f"""                    <a href="{esc(item["url"])}" target="_blank" rel="noopener noreferrer" class="card"{attrs}>{render_logo(item)}
                         <h3>{esc(item["name"])}</h3>
                         <p>{esc(item["description"])}</p>
                     </a>"""
 
 
-def render_continents(continents: list, orgs: list) -> str:
+def render_continents(continents: list, orgs: list, *, include_visitable: bool = True) -> str:
     org_continents = {org.get("continent") for org in orgs if org.get("continent")}
-    has_visitable = any(org.get("visitable") for org in orgs)
+    has_visitable = include_visitable and any(org.get("visitable") for org in orgs)
 
     lines = []
     for continent in continents:
@@ -64,6 +69,18 @@ def render_continents(continents: list, orgs: list) -> str:
         selected = ' aria-selected="true"' if cid == "all" else ""
         lines.append(
             f'                        <button class="chip{active}" data-continent="{esc(cid)}" role="tab"{selected}>{esc(continent["label"])}</button>'
+        )
+    return "\n".join(lines)
+
+
+def render_filter_chips(categories: list, attr: str) -> str:
+    lines = []
+    for index, category in enumerate(categories):
+        cid = category["id"]
+        active = " is-active" if index == 0 else ""
+        selected = ' aria-selected="true"' if index == 0 else ""
+        lines.append(
+            f'                        <button class="chip{active}" data-{attr}="{esc(cid)}" role="tab"{selected}>{esc(category["label"])}</button>'
         )
     return "\n".join(lines)
 
@@ -100,24 +117,53 @@ def render_marquee_row(items: list, reverse: bool = False) -> str:
 
 def opensource_items(data: dict) -> list:
     section = data.get("opensource", {})
-    return section.get("emulators", []) + section.get("dumping_tools", [])
+    items = []
+    for item in section.get("emulators", []):
+        items.append({**item, "category": "emulator"})
+    for item in section.get("dumping_tools", []):
+        items.append({**item, "category": "dumping_tool"})
+    return items
+
+
+def visitable_orgs(orgs: list) -> list:
+    return [org for org in orgs if org.get("visitable")]
+
+
+def render_hero_tagline(lines: list) -> str:
+    return "".join(f'<span class="hero-tagline-line">{esc(line)}</span>' for line in lines)
+
+
+def render_hero_tagline_default(hero: dict) -> str:
+    taglines = hero.get("taglines", [])
+    if not taglines:
+        return ""
+    return render_hero_tagline(taglines[0]["lines"])
+
+
+def render_hero_taglines_json(hero: dict) -> str:
+    taglines = hero.get("taglines", [])
+    return json.dumps(taglines)
+
+
+def render_hero_blurb(hero: dict) -> str:
+    paragraphs = hero.get("blurb", [])
+    lines = []
+    for paragraph in paragraphs:
+        lines.append(f'                        <p>{esc(paragraph)}</p>')
+    return "\n".join(lines)
 
 
 def render_hero_stats(data: dict) -> str:
+    orgs = data["organizations"]
     sections = [
-        ("organizations", "Organizations"),
-        ("guides", "Guides"),
-        ("databases", "Databases"),
-        ("opensource", "Open Source"),
-        ("resources", "Resources"),
-        ("unreleased", "Unreleased"),
+        (len(orgs), "Organizations"),
+        (len(visitable_orgs(orgs)), "Visit in Person"),
+        (len(data["guides"]), "Guides"),
+        (len(opensource_items(data)), "Open Source"),
+        (len(data["resources"]), "Resources"),
     ]
     lines = []
-    for key, label in sections:
-        if key == "opensource":
-            count = len(opensource_items(data))
-        else:
-            count = len(data[key])
+    for count, label in sections:
         lines.append(
             f"""                    <div class="hero-stat">
                         <span class="hero-stat-num">{count}</span>
@@ -131,10 +177,11 @@ def render_footer_credit(site: dict) -> str:
     credit = site.get("footer_credit")
     if not credit:
         return ""
+    suffix = esc(credit.get("suffix", ""))
     return (
         f'<p class="footer-credit">{esc(credit["text"])} '
         f'<a href="{esc(credit["url"])}" target="_blank" rel="noopener noreferrer">'
-        f'{esc(credit["name"])}</a></p>'
+        f'{esc(credit["name"])}</a>{suffix}</p>'
     )
 
 
@@ -146,37 +193,32 @@ def build() -> None:
     hero = site["hero"]
 
     orgs = data["organizations"]
-    community = (
-        data["guides"]
-        + data["databases"]
-        + opensource_items(data)
-        + data["resources"]
-        + data["unreleased"]
-    )
-    opensource = data.get("opensource", {})
+    visitable = visitable_orgs(orgs)
+    community = data["guides"] + opensource_items(data) + data["resources"]
 
     replacements = {
         "{{title}}": esc(site["title"]),
-        "{{hero_title}}": esc(hero["title"]),
-        "{{hero_subtitle}}": esc(hero["subtitle"]),
-        "{{hero_text}}": esc(hero["text"]),
+        "{{hero_tagline_default}}": render_hero_tagline_default(hero),
+        "{{hero_taglines_json}}": render_hero_taglines_json(hero),
+        "{{hero_blurb}}": render_hero_blurb(hero),
         "{{footer}}": esc(site["footer"]),
         "{{footer_credit}}": render_footer_credit(site),
         "{{hero_stats}}": render_hero_stats(data),
         "{{marquee_orgs}}": render_marquee_row(orgs, reverse=False),
         "{{marquee_community}}": render_marquee_row(community, reverse=True),
-        "{{continents}}": render_continents(data["continents"], orgs),
-        "{{organizations}}": "\n\n".join(render_org_card(org) for org in data["organizations"]),
+        "{{continents}}": render_continents(data["continents"], orgs, include_visitable=True),
+        "{{visit_continents}}": render_continents(data["continents"], visitable, include_visitable=False),
+        "{{organizations}}": "\n\n".join(render_org_card(org) for org in orgs),
+        "{{visit_in_person}}": "\n\n".join(render_org_card(org) for org in visitable),
         "{{guides}}": "\n\n".join(render_card(guide) for guide in data["guides"]),
-        "{{databases}}": "\n\n".join(render_card(db) for db in data["databases"]),
-        "{{opensource_emulators}}": "\n\n".join(
-            render_card(item) for item in opensource.get("emulators", [])
+        "{{resource_categories}}": render_filter_chips(data["resource_categories"], "category"),
+        "{{resources}}": "\n\n".join(
+            render_card(resource, category_attr="category") for resource in data["resources"]
         ),
-        "{{opensource_tools}}": "\n\n".join(
-            render_card(item) for item in opensource.get("dumping_tools", [])
+        "{{opensource_categories}}": render_filter_chips(data["opensource_categories"], "category"),
+        "{{opensource}}": "\n\n".join(
+            render_card(item, category_attr="category") for item in opensource_items(data)
         ),
-        "{{resources}}": "\n\n".join(render_card(resource) for resource in data["resources"]),
-        "{{unreleased}}": "\n\n".join(render_card(item) for item in data["unreleased"]),
     }
 
     output = template

@@ -1,14 +1,21 @@
 site:
   title: preserve.games - Video Game Preservation Portal
   hero:
-    title: preserve.games
-    subtitle: A gateway into the world of video game preservation
-    text: Video game preservation is crucial for maintaining our digital cultural heritage. This portal connects you with organizations, guides, and resources dedicated to preserving the history and culture of video games for future generations.
-  footer: "© 2026 preserve.games — Connecting the video game preservation community"
+    taglines:
+      - lines:
+          - Games are disappearing.
+          - You can help.
+      - lines:
+          - Continue without saving?
+    blurb:
+      - Video games have been part of our culture for over 50 years, and have never been more popular than they are today. But unlike other art forms, the preservation of video game history and culture is largely underfunded and community driven.
+      - Learn more about how you can help ensure games and their history are preserved and accessible for generations to come.
+  footer: "© 2026 preserve.games · Connecting the video game preservation community"
   footer_credit:
     text: Owned and maintained by
     name: Hit Save!
     url: https://hitsave.org
+    suffix: ", a 501(c)(3) nonprofit dedicated to game preservation through community awareness and involvement."
 
 continents:
   - { id: all, label: All }
@@ -22,21 +29,21 @@ continents:
 
 organizations:
   - name: Video Game History Foundation (VGHF)
-    description: Preserves, celebrates, and teaches the history of video games through documentation and archival work.
+    description: 501(c)(3) nonprofit dedicated to preserving, celebrating, and teaching the history of video games.
     url: https://gamehistory.org
     logo: assets/logos/vghf.png
     logo_alt: VGHF logo
     continent: north-america
 
   - name: Hit Save!
-    description: A non-profit organization dedicated to preserving video games, their history, and related materials.
+    description: 501(c)(3) nonprofit dedicated to video game preservation through community-driven projects.
     url: https://hitsave.org
     logo: assets/logos/hitsave.png
     logo_alt: Hit Save! logo
     continent: north-america
 
   - name: Game Preservation Society
-    description: Focused on preserving video game culture and history, particularly in Japan and the wider gaming community.
+    description: Nonprofit archive organization collecting, preserving, digitizing, and publishing Japanese game culture materials from the 1970s through the 1990s.
     url: https://www.gamepres.org
     logo: assets/logos/gps.svg
     logo_alt: Game Preservation Society logo
@@ -48,7 +55,6 @@ organizations:
     logo: assets/logos/mo5.webp
     logo_alt: MO5 logo
     continent: europe
-    visitable: true
 
   - name: Herní Historie
     description: A Czech initiative focused on documenting and preserving the history of video games and their cultural impact.
@@ -80,7 +86,7 @@ organizations:
     continent: europe
 
   - name: Musée Bolo
-    description: Swiss museum dedicated to computer history and digital culture.
+    description: Swiss museum dedicated to computer history, digital culture, and video games.
     url: https://www.museebolo.ch
     logo: assets/logos/musee-bolo.png
     logo_alt: Musée Bolo logo
@@ -112,7 +118,7 @@ organizations:
     visitable: true
 
   - name: The Strong National Museum of Play
-    description: US museum with extensive collections and research on games and play.
+    description: Rochester, NY museum devoted to the history of play, with extensive collections and research including video games.
     url: https://www.museumofplay.org
     logo: assets/logos/strong.svg
     logo_alt: The Strong Museum logo
@@ -136,7 +142,7 @@ organizations:
     visitable: true
 
   - name: Computer History Museum
-    description: Global museum dedicated to preserving and presenting computing history through artifacts and oral histories.
+    description: Silicon Valley museum dedicated to decoding computing history and its impact, through artifacts, exhibits, and oral histories.
     url: https://computerhistory.org
     logo: assets/logos/chm.svg
     logo_alt: Computer History Museum logo
@@ -144,7 +150,7 @@ organizations:
     visitable: true
 
   - name: The MADE
-    description: Museum of Art and Digital Entertainment focused on game preservation and education.
+    description: Oakland nonprofit museum focused on playable preservation of video games and digital entertainment, with education and community programs.
     url: https://themade.org
     logo: assets/logos/made.png
     logo_alt: The MADE logo
@@ -160,7 +166,7 @@ organizations:
     visitable: true
 
   - name: HomeComputerMuseum
-    description: Dutch museum preserving personal computing history and software.
+    description: Interactive Dutch museum in Helmond exploring home-computer history and related devices.
     url: https://www.homecomputermuseum.nl
     logo: assets/logos/homecomputermuseum.svg
     logo_alt: HomeComputerMuseum logo
@@ -176,7 +182,7 @@ organizations:
     visitable: true
 
   - name: National Library of Sweden
-    description: Sweden's national library with legal deposit of games and multimedia.
+    description: Sweden's national library; legal deposit covers physical games, while digital and online games are collected mainly through donations.
     url: https://www.kb.se
     logo: assets/logos/kb-se.svg
     logo_alt: National Library of Sweden logo
@@ -184,7 +190,7 @@ organizations:
     visitable: true
 
   - name: Centre for Computing History
-    description: UK museum and archive dedicated to the past and future of computing.
+    description: Cambridge museum and archive dedicated to computing and video game history.
     url: https://www.computinghistory.org.uk
     logo: assets/logos/cch.png
     logo_alt: Centre for Computing History logo
@@ -197,7 +203,6 @@ organizations:
     logo: assets/logos/rcgs.png
     logo_alt: RCGS logo
     continent: asia
-    visitable: true
 
   - name: The Finnish Museum of Games
     description: Museum in Tampere dedicated to Finnish gaming history.
@@ -208,12 +213,11 @@ organizations:
     visitable: true
 
   - name: SUBOTRON
-    description: Vienna-based platform for game culture, education, and preservation.
+    description: Vienna-based platform for digital game culture, events, and industry networking.
     url: https://subotron.com
     logo: assets/logos/subotron.jpg
     logo_alt: SUBOTRON logo
     continent: europe
-    visitable: true
 
   - name: Conservatoire National du Jeu Vidéo (CNJV)
     description: French conservatory dedicated to preserving and promoting the nation's video game heritage.
@@ -221,10 +225,9 @@ organizations:
     logo: assets/logos/cnjv.png
     logo_alt: CNJV logo
     continent: europe
-    visitable: true
 
   - name: WDA
-    description: French association engaged in archiving and documenting digital and video game heritage.
+    description: French volunteer association collecting, preserving, and restoring digital heritage, including retro-gaming and computing collections.
     url: https://www.wda-fr.org/
     logo: assets/logos/wda.png
     logo_alt: WDA logo
@@ -260,7 +263,6 @@ organizations:
     logo: assets/logos/arcadeplanet.png
     logo_alt: Arcade Planet logo
     continent: europe
-    visitable: true
 
   - name: ACMI
     description: Australia's national museum of screen culture in Melbourne, with major game exhibitions and preservation work.
@@ -271,7 +273,7 @@ organizations:
     visitable: true
 
   - name: The Nostalgia Box
-    description: Interactive video game console museum in West Perth, open Wed–Sun.
+    description: Interactive video game console museum in West Perth (City West), open Tue–Sun.
     url: https://thenostalgiabox.com.au/
     logo: assets/logos/nostalgia-box.svg
     logo_alt: The Nostalgia Box logo
@@ -284,7 +286,6 @@ organizations:
     logo: assets/logos/gamesmen.svg
     logo_alt: The Gamesmen logo
     continent: oceania
-    visitable: true
 
   - name: Museu Bojogá de Jogos Eletrônicos
     description: Fortaleza museum with a permanent installation at Casa de Cultura Digital and active festivals.
@@ -295,12 +296,11 @@ organizations:
     visitable: true
 
   - name: Museo de Informática de la República Argentina (Fundación ICATEC)
-    description: Buenos Aires computing history museum with retro-gaming-adjacent events and exhibitions.
+    description: Argentine computing-history foundation; its Buenos Aires museum closed in 2022 and donated its collection to Espacio Tec in Bahía Blanca.
     url: https://museodeinformatica.org.ar/
     logo: assets/logos/museo-informatica-ar.png
     logo_alt: Museo de Informática logo
     continent: south-america
-    visitable: true
 
 guides:
   - name: Dumping.Guide
@@ -316,121 +316,191 @@ guides:
     logo_alt: Scanning Guide logo
 
   - name: Preservation.Guide
-    description: General best practices and comprehensive information about preserving video games and related content.
+    description: Introductory portal to video game preservation, covering dumping, scanning, research resources, and community organizations.
     url: https://preservation.guide
     logo: assets/logos/preservation.guide.png
     logo_alt: Preservation Guide logo
 
-  - name: Restore and Replay (Eldoug)
-    description: Expert video guides on cleaning, repairing, and restoring game media, systems, and more.
+  - name: Restore and Replay
+    description: Video guides on cleaning and preserving game media, with methods backed by testing and community feedback.
     url: https://www.youtube.com/@RestoreAndReplay
     logo: assets/logos/restore-and-replay.png
-    logo_alt: Restore and Replay (Eldoug) logo
+    logo_alt: Restore and Replay logo
 
-databases:
+resource_categories:
+  - { id: all, label: All }
+  - { id: database, label: Databases }
+  - { id: wiki, label: Wikis }
+  - { id: unreleased, label: Unreleased & Beta }
+  - { id: archives, label: Archives & Libraries }
+  - { id: news, label: News & Reports }
+
+opensource_categories:
+  - { id: all, label: All }
+  - { id: emulator, label: Emulators }
+  - { id: dumping_tool, label: Dumping Tools }
+
+resources:
   - name: No-Intro
-    description: A community project focused on cataloging and verifying clean dumps of game cartridges and ROM files.
+    description: Community project cataloging and verifying the best available copies of ROMs and digital games, with DAT files and an online database.
     url: https://no-intro.org/
     logo: assets/logos/no-intro.svg
     logo_alt: No-Intro logo
+    category: database
 
   - name: Redump
     description: A project dedicated to the preservation of optical disc-based games through accurate dumps and verification.
     url: https://redump.info
     logo: assets/logos/redump.png
     logo_alt: Redump logo
+    category: database
 
   - name: TOSEC
-    description: The Old School Emulation Center - community-maintained dat files cataloging retro software across thousands of systems.
+    description: The Old School Emulation Center, community-maintained DAT files cataloging retro software, firmware, and related media across hundreds of platforms.
     url: https://www.tosecdev.org/
     logo: assets/logos/tosec.png
     logo_alt: TOSEC logo
-
-resources:
-  - name: The Cutting Room Floor (TCRF)
-    description: A wiki documenting unused, hidden, and cut content found in video games through datamining and research.
-    url: https://tcrf.net
-    logo: assets/logos/the-cutting-room-floor-tcrf.png
-    logo_alt: The Cutting Room Floor (TCRF) logo
-
-  - name: Keitai Wiki
-    description: A community wiki dedicated to documenting Japanese mobile phone games, platforms, and keitai culture.
-    url: https://keitaiwiki.com/
-    logo: assets/logos/keitai-wiki.png
-    logo_alt: Keitai Wiki logo
-
-  - name: Internet Archive
-    description: Non-profit digital library with vast collections of software, games, manuals, and related media.
-    url: https://archive.org/details/software
-    logo: assets/logos/internet-archive.png
-    logo_alt: Internet Archive logo
-
-  - name: StrategyWiki
-    description: A collaborative wiki cataloguing gameplay, mechanics, and structure across thousands of games.
-    url: https://strategywiki.org/
-    logo: assets/logos/strategywiki.png
-    logo_alt: StrategyWiki logo
+    category: database
 
   - name: MobyGames
     description: Extensive catalog of game metadata, credits, cover art, and platform information across decades of releases.
     url: https://www.mobygames.com/
     logo: assets/logos/mobygames.png
     logo_alt: MobyGames logo
+    category: database
 
   - name: IGDB
-    description: Internet Game Database - community-driven game metadata used by preservation projects, emulators, and frontends.
+    description: Internet Game Database, community-driven game metadata used by preservation projects, emulators, and frontends.
     url: https://www.igdb.com/
     logo: assets/logos/igdb.png
     logo_alt: IGDB logo
+    category: database
 
   - name: VGMdb
-    description: Video Game Music Database - detailed catalog of game soundtracks, albums, composers, and track listings.
+    description: Catalog of video game and anime soundtracks, albums, composers, and track listings.
     url: https://vgmdb.net/
     logo: assets/logos/vgmdb.png
     logo_alt: VGMdb logo
+    category: database
 
   - name: African Digital Games Database
     description: Database of notable games developed and produced in Africa, with studio, genre, and play links.
     url: https://stemtoto.org/work/african-games-database
     logo: assets/logos/african-digital-games-database.png
     logo_alt: African Digital Games Database logo
+    category: database
 
-  - name: Africa Games Industry Report
-    description: Award-winning publication with market data, developer surveys, and insights on Africa's games industry.
-    url: https://africagamesreport.com/
-    logo: assets/logos/africa-games-report.png
-    logo_alt: Africa Games Industry Report logo
+  - name: The Cutting Room Floor (TCRF)
+    description: A wiki documenting unused, hidden, and cut content found in video games through datamining and research.
+    url: https://tcrf.net
+    logo: assets/logos/the-cutting-room-floor-tcrf.png
+    logo_alt: The Cutting Room Floor (TCRF) logo
+    category: wiki
 
-  - name: Games Industry Africa
-    description: News, profiles, resources, and industry reports covering African game developers and studios.
-    url: https://gamesindustryafrica.com/
-    logo: assets/logos/games-industry-africa.png
-    logo_alt: Games Industry Africa logo
+  - name: Keitai Wiki
+    description: A community wiki dedicated to documenting Japanese mobile phone games, platforms, and keitai culture.
+    url: https://keitaiwiki.com/
+    logo: assets/logos/keitai-wiki.png
+    logo_alt: Keitai Wiki logo
+    category: wiki
 
-unreleased:
+  - name: StrategyWiki
+    description: A collaborative wiki cataloguing gameplay, mechanics, and structure across thousands of games.
+    url: https://strategywiki.org/
+    logo: assets/logos/strategywiki.png
+    logo_alt: StrategyWiki logo
+    category: wiki
+
+  - name: Internet Archive
+    description: Non-profit digital library with vast collections of software, games, manuals, and related media.
+    url: https://archive.org/details/software
+    logo: assets/logos/internet-archive.png
+    logo_alt: Internet Archive logo
+    category: archives
+
+  - name: Hit Save! Archive
+    description: Browse Hit Save!'s physical archive holdings, including magazines, books, games, machines, press materials, and more.
+    url: https://archive.hitsave.org/
+    logo: assets/logos/hitsave.png
+    logo_alt: Hit Save! Archive logo
+    category: archives
+
+  - name: VGHF Digital Archive
+    description: Portal to the Video Game History Foundation's digitized collections, including magazines, press kits, development materials, and research documents.
+    url: https://archive.gamehistory.org/
+    logo: assets/logos/vghf.png
+    logo_alt: VGHF Digital Archive logo
+    category: archives
+
   - name: Hidden Palace
     description: Archives and publishes video game prototypes, betas, prereleases, and other rare development material.
     url: https://hiddenpalace.org
     logo: assets/logos/hidden-palace.png
     logo_alt: Hidden Palace logo
+    category: unreleased
 
   - name: Unseen64
     description: Documents cancelled, beta, and unreleased video games with research, media, and interviews.
     url: https://unseen64.net
     logo: assets/logos/unseen64.png
     logo_alt: Unseen64 logo
+    category: unreleased
 
   - name: Lost Levels
-    description: Long-running site by Frank Cifaldi focused on unreleased and prototype games, especially for classic platforms.
+    description: Long-running site by Frank Cifaldi documenting unreleased and prototype games through articles, research, and community discussion.
     url: http://www.lostlevels.org/
     logo: assets/logos/lost-levels.png
     logo_alt: Lost Levels logo
+    category: unreleased
 
   - name: BetaArchive
     description: Community preserving beta and pre-release software, including many game prototypes and early builds.
     url: https://betaarchive.com
     logo: assets/logos/betaarchive.gif
     logo_alt: BetaArchive logo
+    category: unreleased
+
+  - name: Africa Games Industry Report
+    description: Award-winning publication with market data, developer surveys, and insights on Africa's games industry.
+    url: https://africagamesreport.com/
+    logo: assets/logos/africa-games-report.png
+    logo_alt: Africa Games Industry Report logo
+    category: news
+
+  - name: Games Industry Africa
+    description: News, profiles, resources, and industry reports covering African game developers and studios.
+    url: https://gamesindustryafrica.com/
+    logo: assets/logos/games-industry-africa.png
+    logo_alt: Games Industry Africa logo
+    category: news
+
+  - name: GamesIndustry.biz
+    description: Leading games industry news covering business, development, market data, and trends worldwide.
+    url: https://www.gamesindustry.biz/
+    logo: assets/logos/gamesindustry-biz.ico
+    logo_alt: GamesIndustry.biz logo
+    category: news
+
+  - name: Retro Gamer
+    description: UK magazine and website covering retro gaming history, hardware, and classic game preservation stories.
+    url: https://www.retrogamer.net/
+    logo: assets/logos/retro-gamer.png
+    logo_alt: Retro Gamer logo
+    category: news
+
+  - name: Time Extension
+    description: Retro gaming news, features, and reviews from the team behind Retro Gamer and GamesRadar+.
+    url: https://www.timeextension.com/
+    logo: assets/logos/time-extension.png
+    logo_alt: Time Extension logo
+    category: news
+
+  - name: Did You Know Gaming?
+    description: Gaming trivia, development history, and video deep-dives on obscure facts and behind-the-scenes stories.
+    url: https://www.didyouknowgaming.com/
+    logo: assets/logos/did-you-know-gaming.jpg
+    logo_alt: Did You Know Gaming logo
+    category: news
 
 opensource:
   emulators:
@@ -441,13 +511,13 @@ opensource:
       logo_alt: MAME logo
 
     - name: Ares
-      description: Cycle-accurate multi-system emulator for NES, SNES, Game Boy, Mega Drive, Saturn, and other classic hardware.
+      description: Cycle-accurate multi-system emulator for NES, SNES, Game Boy, Mega Drive, and other classic hardware.
       url: https://ares-emu.net/
       logo: assets/logos/ares.png
       logo_alt: Ares logo
 
     - name: ScummVM
-      description: Virtual machine preserving classic point-and-click and adventure games across many engines and platforms.
+      description: Engine reimplementation preserving classic graphical adventure and role-playing games across many engines and platforms.
       url: https://www.scummvm.org/
       logo: assets/logos/scummvm.png
       logo_alt: ScummVM logo
@@ -495,7 +565,7 @@ opensource:
       logo_alt: melonDS logo
 
     - name: Azahar
-      description: Active open-source Nintendo 3DS emulator, continuing development after Citra — supports CIA and 3DS dumps.
+      description: Active open-source Nintendo 3DS emulator, continuing development after Citra, with support for CIA and 3DS dumps.
       url: https://azahar-emu.org/
       logo: assets/logos/azahar.svg
       logo_alt: Azahar logo
@@ -556,7 +626,7 @@ opensource:
       logo_alt: DiscImageCreator logo
 
     - name: Media Preservation Frontend
-      description: GUI front-end bundling redumper, DiscImageCreator, and Aaru — recommended by Redump and Dumping.Guide.
+      description: GUI front-end bundling redumper, DiscImageCreator, and Aaru, recommended by Redump and Dumping.Guide.
       url: https://github.com/SabreTools/MPF
       logo: assets/logos/mpf.png
       logo_alt: Media Preservation Frontend logo
@@ -580,7 +650,7 @@ opensource:
       logo_alt: Media Authenticator logo
 
     - name: ddrescue
-      description: GNU data recovery tool used in Redump's CLI disc dumping guide for failing or difficult drives.
+      description: GNU data recovery tool for copying data from failing or damaged block devices and optical media.
       url: https://www.gnu.org/software/ddrescue/
       logo: assets/logos/ddrescue.jpg
       logo_alt: ddrescue logo
