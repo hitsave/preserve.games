@@ -331,6 +331,12 @@ guides:
     logo: assets/logos/restore-and-replay.png
     logo_alt: Restore and Replay logo
 
+  - name: Krugman's Dumping Guide
+    description: In-depth guide to preserving floppy disk media on Japanese computers from the 1980s and 1990s, covering drives, cleaning, and Greaseweazle dumping workflows.
+    url: https://krugman.net/dumping/
+    logo: assets/logos/krugman-dumping.png
+    logo_alt: Krugman's Dumping Guide logo
+
 communities:
   - name: Video Game Preservation Collective (VGPC)
     description: Community hub that connects newcomers with established preservation projects and teaches how to contribute without hoarding or duplicating work.
