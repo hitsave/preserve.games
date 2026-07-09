@@ -17,6 +17,7 @@
                 <a href="#communities" class="button nav-button" data-nav="communities">Communities</a>
                 <a href="#opensource" class="button nav-button" data-nav="opensource">Open Source</a>
                 <a href="#resources" class="button nav-button" data-nav="resources">Resources</a>
+                <a href="#browse" class="button nav-button" data-nav="browse">Browse All</a>
             </nav>
         </header>
 
@@ -104,6 +105,21 @@
                 </div>
                 <div class="cards-grid">
 {{resources}}
+                </div>
+            </section>
+
+            <section class="page browse" data-page="browse" hidden>
+                <h2>Browse All</h2>
+                <p class="page-lead">Every link on preserve.games in one place. Search or pick a category to narrow the list.</p>
+                <div class="filter-bar" data-filterable data-chip-attr="section" data-show-count="true" aria-label="Filter all links">
+                    <div class="filter-chips" role="tablist">
+{{browse_sections}}
+                    </div>
+                    <input type="search" class="filter-search" placeholder="Search by name or description…" aria-label="Search all links">
+                    <p class="filter-results" aria-live="polite"></p>
+                </div>
+                <div class="cards-grid">
+{{browse_all}}
                 </div>
             </section>
         </main>

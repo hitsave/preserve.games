@@ -50,6 +50,42 @@ def render_card(item: dict, *, category_attr: str | None = None) -> str:
                     </a>"""
 
 
+def render_browse_card(item: dict, section: str, section_label: str) -> str:
+    attrs_parts = [f'data-section="{esc(section)}"']
+    if section == "organizations" and item.get("visitable"):
+        attrs_parts.append('data-visitable="true"')
+    if item.get("category"):
+        attrs_parts.append(f'data-category="{esc(item["category"])}"')
+    attrs = " " + " ".join(attrs_parts)
+    return f"""                    <a href="{esc(item["url"])}" target="_blank" rel="noopener noreferrer" class="card card-browse"{attrs}>{render_logo(item)}
+                        <span class="card-badge">{esc(section_label)}</span>
+                        <h3>{esc(item["name"])}</h3>
+                        <p>{esc(item["description"])}</p>
+                    </a>"""
+
+
+def render_browse_all(data: dict) -> str:
+    section_labels = {entry["id"]: entry["label"] for entry in data["browse_sections"] if entry["id"] != "all"}
+    cards = []
+
+    for org in data["organizations"]:
+        cards.append(render_browse_card(org, "organizations", section_labels["organizations"]))
+
+    for guide in data["guides"]:
+        cards.append(render_browse_card(guide, "guides", section_labels["guides"]))
+
+    for item in data.get("communities", []):
+        cards.append(render_browse_card(item, "communities", section_labels["communities"]))
+
+    for item in opensource_items(data):
+        cards.append(render_browse_card(item, "opensource", section_labels["opensource"]))
+
+    for resource in data["resources"]:
+        cards.append(render_browse_card(resource, "resources", section_labels["resources"]))
+
+    return "\n\n".join(cards)
+
+
 def render_continents(continents: list, orgs: list, *, include_visitable: bool = True) -> str:
     org_continents = {org.get("continent") for org in orgs if org.get("continent")}
     has_visitable = include_visitable and any(org.get("visitable") for org in orgs)
@@ -239,6 +275,8 @@ def build() -> None:
         "{{opensource}}": "\n\n".join(
             render_card(item, category_attr="category") for item in opensource_items(data)
         ),
+        "{{browse_sections}}": render_filter_chips(data["browse_sections"], "section"),
+        "{{browse_all}}": render_browse_all(data),
     }
 
     output = template

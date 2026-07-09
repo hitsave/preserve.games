@@ -494,6 +494,33 @@ section h2 {
     min-width: 240px;
 }
 
+.filter-results {
+    flex-basis: 100%;
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.card-badge {
+    align-self: flex-start;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border-color);
+}
+
+.card-browse .card-logo {
+    margin-bottom: 0.75rem;
+}
+
 /* Card styles */
 .card {
     background:
@@ -593,7 +620,8 @@ section h2 {
 .guides,
 .communities,
 .opensource,
-.resources {
+.resources,
+.browse {
     margin-bottom: 5rem;
 }
 
@@ -706,7 +734,8 @@ footer {
     .guides,
     .communities,
     .opensource,
-    .resources {
+    .resources,
+    .browse {
         margin-bottom: 3rem;
     }
 }

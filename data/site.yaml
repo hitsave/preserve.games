@@ -21,6 +21,15 @@ site:
     url: https://github.com/hitsave/preserve.games/issues/new?labels=submission&title=Resource%20suggestion&body=**Name%3A**%0A%0A**URL%3A**%0A%0A**Description%3A**%0A%0A**Why%20include%3A**%0A
     link_text: Suggest a resource
 
+browse_sections:
+  - { id: all, label: All }
+  - { id: organizations, label: Organizations }
+  - { id: visit-in-person, label: Visit in Person }
+  - { id: guides, label: Guides }
+  - { id: communities, label: Communities }
+  - { id: opensource, label: Open Source }
+  - { id: resources, label: Resources }
+
 continents:
   - { id: all, label: All }
   - { id: africa, label: Africa }
