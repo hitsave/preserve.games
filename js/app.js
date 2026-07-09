@@ -2,13 +2,14 @@
     const pages = document.querySelectorAll('.page');
     const navLinks = document.querySelectorAll('[data-nav]');
     const siteTitle = document.body.dataset.siteTitle || 'preserve.games';
-    const routes = new Set(['home', 'organizations', 'visit-in-person', 'guides', 'opensource', 'resources']);
+    const routes = new Set(['home', 'organizations', 'visit-in-person', 'guides', 'communities', 'opensource', 'resources']);
 
     const pageTitles = {
         home: siteTitle,
         organizations: 'Organizations | preserve.games',
         'visit-in-person': 'Visit in Person | preserve.games',
         guides: 'Guides | preserve.games',
+        communities: 'Communities | preserve.games',
         opensource: 'Open Source | preserve.games',
         resources: 'Resources | preserve.games',
     };

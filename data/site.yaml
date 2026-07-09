@@ -16,6 +16,10 @@ site:
     name: Hit Save!
     url: https://hitsave.org
     suffix: ", a 501(c)(3) nonprofit dedicated to game preservation through community awareness and involvement."
+  suggest:
+    text: Know an organization, guide, tool, community, or resource we should list? We review every suggestion.
+    url: https://github.com/hitsave/preserve.games/issues/new?labels=submission&title=Resource%20suggestion&body=**Name%3A**%0A%0A**URL%3A**%0A%0A**Description%3A**%0A%0A**Why%20include%3A**%0A
+    link_text: Suggest a resource
 
 continents:
   - { id: all, label: All }
@@ -327,6 +331,31 @@ guides:
     logo: assets/logos/restore-and-replay.png
     logo_alt: Restore and Replay logo
 
+communities:
+  - name: Video Game Preservation Collective (VGPC)
+    description: Community hub that connects newcomers with established preservation projects and teaches how to contribute without hoarding or duplicating work.
+    url: https://discord.gg/AHTfxQV 
+    logo: assets/logos/vgpc.png
+    logo_alt: VGPC logo
+
+  - name: Gaming Alexandria
+    description: Preservation community sharing high-resolution scans, articles, interviews, and prototype dumps before materials are lost.
+    url: https://gamingalexandria.com/
+    logo: assets/logos/gaming-alexandria.png
+    logo_alt: Gaming Alexandria logo
+
+  - name: Dumping Union
+    description: Collaborative group of arcade collectors and dumpers locating and preserving undumped arcade boards for projects like MAME.
+    url: https://arcade.vastheman.com/dunion/
+    logo: assets/logos/dumping-union.png
+    logo_alt: Dumping Union logo
+
+  - name: Flashpoint Archive
+    description: Community effort preserving web games, animations, and interactive media across Flash and other legacy web technologies.
+    url: https://flashpointarchive.org/
+    logo: assets/logos/flashpoint.png
+    logo_alt: Flashpoint Archive logo
+
 resource_categories:
   - { id: all, label: All }
   - { id: database, label: Databases }
@@ -619,6 +648,12 @@ opensource:
       logo: assets/logos/redumper.png
       logo_alt: redumper logo
 
+    - name: Redumper GUI
+      description: Cross-platform GUI for redumper optical disc dumping, with optional MPF post-processing integration.
+      url: https://github.com/Deterous/Redumper-GUI
+      logo: assets/logos/redumper-gui.png
+      logo_alt: Redumper GUI logo
+
     - name: DiscImageCreator
       description: Redump-compatible CLI dumper for CD, GD-ROM, DVD, Blu-ray, GameCube, Wii, Xbox, and floppy media.
       url: https://github.com/saramibreak/DiscImageCreator
@@ -628,7 +663,7 @@ opensource:
     - name: Media Preservation Frontend
       description: GUI front-end bundling redumper, DiscImageCreator, and Aaru, recommended by Redump and Dumping.Guide.
       url: https://github.com/SabreTools/MPF
-      logo: assets/logos/mpf.png
+      logo: assets/logos/mpf.ico
       logo_alt: Media Preservation Frontend logo
 
     - name: Aaru

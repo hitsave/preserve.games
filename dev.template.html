@@ -14,6 +14,7 @@
                 <a href="#organizations" class="button nav-button" data-nav="organizations">Organizations</a>
                 <a href="#visit-in-person" class="button nav-button" data-nav="visit-in-person">Visit in Person</a>
                 <a href="#guides" class="button nav-button" data-nav="guides">Guides</a>
+                <a href="#communities" class="button nav-button" data-nav="communities">Communities</a>
                 <a href="#opensource" class="button nav-button" data-nav="opensource">Open Source</a>
                 <a href="#resources" class="button nav-button" data-nav="resources">Resources</a>
             </nav>
@@ -71,6 +72,14 @@
                 </div>
             </section>
 
+            <section class="page communities" data-page="communities" hidden>
+                <h2>Communities</h2>
+                <p class="page-lead">Discord servers, forums, and volunteer groups where preservationists learn, coordinate, and contribute.</p>
+                <div class="cards-grid">
+{{communities}}
+                </div>
+            </section>
+
             <section class="page opensource" data-page="opensource" hidden>
                 <h2>Open Source Projects</h2>
                 <div class="filter-bar" data-filterable data-chip-attr="category" aria-label="Filter open source projects">
@@ -86,6 +95,7 @@
 
             <section class="page resources" data-page="resources" hidden>
                 <h2>Resources</h2>
+                {{suggest_block}}
                 <div class="filter-bar" data-filterable data-chip-attr="category" aria-label="Filter resources">
                     <div class="filter-chips" role="tablist">
 {{resource_categories}}
@@ -99,6 +109,7 @@
         </main>
 
         <footer>
+            {{suggest_block}}
             <p>{{footer}}</p>
             {{footer_credit}}
         </footer>

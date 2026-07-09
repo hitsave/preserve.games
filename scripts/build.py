@@ -159,6 +159,7 @@ def render_hero_stats(data: dict) -> str:
         (len(orgs), "Organizations"),
         (len(visitable_orgs(orgs)), "Visit in Person"),
         (len(data["guides"]), "Guides"),
+        (len(data.get("communities", [])), "Communities"),
         (len(opensource_items(data)), "Open Source"),
         (len(data["resources"]), "Resources"),
     ]
@@ -185,6 +186,18 @@ def render_footer_credit(site: dict) -> str:
     )
 
 
+def render_suggest_block(site: dict) -> str:
+    suggest = site.get("suggest")
+    if not suggest:
+        return ""
+    link_text = esc(suggest.get("link_text", "Suggest a resource"))
+    return (
+        f'<p class="suggest-block">{esc(suggest["text"])} '
+        f'<a href="{esc(suggest["url"])}" target="_blank" rel="noopener noreferrer">'
+        f'{link_text}</a>.</p>'
+    )
+
+
 def build() -> None:
     data = yaml.safe_load(DATA_FILE.read_text(encoding="utf-8"))
     template = TEMPLATE_FILE.read_text(encoding="utf-8")
@@ -194,7 +207,12 @@ def build() -> None:
 
     orgs = data["organizations"]
     visitable = visitable_orgs(orgs)
-    community = data["guides"] + opensource_items(data) + data["resources"]
+    community = (
+        data["guides"]
+        + data.get("communities", [])
+        + opensource_items(data)
+        + data["resources"]
+    )
 
     replacements = {
         "{{title}}": esc(site["title"]),
@@ -203,6 +221,7 @@ def build() -> None:
         "{{hero_blurb}}": render_hero_blurb(hero),
         "{{footer}}": esc(site["footer"]),
         "{{footer_credit}}": render_footer_credit(site),
+        "{{suggest_block}}": render_suggest_block(site),
         "{{hero_stats}}": render_hero_stats(data),
         "{{marquee_orgs}}": render_marquee_row(orgs, reverse=False),
         "{{marquee_community}}": render_marquee_row(community, reverse=True),
@@ -211,6 +230,7 @@ def build() -> None:
         "{{organizations}}": "\n\n".join(render_org_card(org) for org in orgs),
         "{{visit_in_person}}": "\n\n".join(render_org_card(org) for org in visitable),
         "{{guides}}": "\n\n".join(render_card(guide) for guide in data["guides"]),
+        "{{communities}}": "\n\n".join(render_card(item) for item in data.get("communities", [])),
         "{{resource_categories}}": render_filter_chips(data["resource_categories"], "category"),
         "{{resources}}": "\n\n".join(
             render_card(resource, category_attr="category") for resource in data["resources"]
