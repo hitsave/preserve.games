@@ -526,10 +526,10 @@ resources:
     category: news
 
   - name: Retro Gamer
-    description: UK magazine and website covering retro gaming history, hardware, and classic game preservation stories.
+    description: Retro gaming magazine and website from GamesRadar+, covering classic game history, hardware, and preservation stories.
     url: https://www.retrogamer.net/
-    logo: assets/logos/retro-gamer.png
-    logo_alt: Retro Gamer logo
+    logo: assets/logos/gamesradar-plus.svg
+    logo_alt: GamesRadar+ logo
     category: news
 
   - name: Time Extension

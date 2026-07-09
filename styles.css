@@ -308,6 +308,10 @@ body {
     padding: 4px;
 }
 
+.marquee-logo[src*="gamesradar"] {
+    background: #000000;
+}
+
 .marquee-logo[src*="duckstation"],
 .marquee-logo[src*="dolphin"] {
     background: transparent;
@@ -325,7 +329,8 @@ body {
 
 .marquee-logo[src*="vgpc"],
 .marquee-logo[src*="gaming-alexandria"],
-.marquee-logo[src*="dumping-union"] {
+.marquee-logo[src*="dumping-union"],
+.marquee-logo[src*="gamesradar"] {
     width: auto;
     min-width: 100px;
     max-width: 160px;
@@ -587,6 +592,13 @@ section h2 {
     background: transparent;
     padding: 0;
     box-shadow: none;
+}
+
+.card-logo[src*="gamesradar"] {
+    background: #000000;
+    width: 100%;
+    max-height: 56px;
+    padding: 8px 12px;
 }
 
 .card-logo[src$=".png"],
