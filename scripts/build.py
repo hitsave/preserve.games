@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build dev.html from data/site.yaml and dev.template.html."""
+"""Build index.html from data/site.yaml and template.html."""
 
 import html
 import json
@@ -9,8 +9,8 @@ import yaml
 
 ROOT = Path(__file__).resolve().parent.parent
 DATA_FILE = ROOT / "data" / "site.yaml"
-TEMPLATE_FILE = ROOT / "dev.template.html"
-OUTPUT_FILE = ROOT / "dev.html"
+TEMPLATE_FILE = ROOT / "template.html"
+OUTPUT_FILE = ROOT / "index.html"
 
 
 def esc(text: str) -> str:

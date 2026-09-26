@@ -7,12 +7,10 @@ Guidance for AI assistants working on **preserve.games**.
 Static site built from YAML content and an HTML template:
 
 - **Content:** `data/site.yaml`
-- **Template:** `dev.template.html`
-- **Build:** `python scripts/build.py` → `dev.html`
-- **Preview:** `dev.html` (full site); `index.html` is the public coming-soon page
+- **Template:** `template.html`
+- **Build:** `python scripts/build.py` → `index.html`
+- **Preview:** open `index.html` locally or deploy via Wrangler
 - **Assets:** `assets/logos/` (fetch via `python scripts/fetch_logos.py`)
-
-Do not overwrite `index.html` with the build output unless explicitly asked.
 
 ## Writing style
 
