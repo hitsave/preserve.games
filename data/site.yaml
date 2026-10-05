@@ -635,7 +635,7 @@ opensource:
 
     - name: SquirrelJME
       description: Open-source Java ME 8 virtual machine for preserving mobile Java and J2ME software, including Japanese keitai titles, with libretro support.
-      url: https://github.com/SquirrelJME/SquirrelJME
+      url: https://squirreljme.cc/
       logo: assets/logos/squirreljme.png
       logo_alt: SquirrelJME logo
 
