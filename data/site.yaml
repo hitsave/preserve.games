@@ -434,6 +434,13 @@ resources:
     logo_alt: African Digital Games Database logo
     category: database
 
+  - name: GC Saves
+    description: Database of GameCube save files for emulators and consoles, preserving content locked behind completion, including bonus characters, levels, modes, and unlockable documentaries.
+    url: https://gc-saves.com/
+    logo: assets/logos/gc-saves.png
+    logo_alt: GC Saves logo
+    category: database
+
   - name: The Cutting Room Floor (TCRF)
     description: A wiki documenting unused, hidden, and cut content found in video games through datamining and research.
     url: https://tcrf.net
