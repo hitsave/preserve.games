@@ -626,6 +626,12 @@ opensource:
       logo: assets/logos/retroarch.png
       logo_alt: RetroArch logo
 
+    - name: SquirrelJME
+      description: Open-source Java ME 8 virtual machine for preserving mobile Java and J2ME software, including Japanese keitai titles, with libretro support.
+      url: https://github.com/SquirrelJME/SquirrelJME
+      logo: assets/logos/squirreljme.png
+      logo_alt: SquirrelJME logo
+
   dumping_tools:
     - name: Open Source Cart Reader
       description: Arduino-based dumper recommended by Dumping.Guide for NES, SNES, N64, Game Boy, Mega Drive, and more.
@@ -692,12 +698,6 @@ opensource:
       url: https://github.com/FIX94/CleanRip
       logo: assets/logos/cleanrip.png
       logo_alt: CleanRip logo
-
-    - name: Media Authenticator
-      description: Redump companion tool for verifying optical-disc dumps against community hash databases.
-      url: https://github.com/redump/media-authenticator
-      logo: assets/logos/media-authenticator.png
-      logo_alt: Media Authenticator logo
 
     - name: ddrescue
       description: GNU data recovery tool for copying data from failing or damaged block devices and optical media.
