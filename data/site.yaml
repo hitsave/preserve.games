@@ -130,6 +130,14 @@ organizations:
     continent: asia
     visitable: true
 
+  - name: Netmarble Game Museum
+    description: Interactive museum in Seoul with domestic and international game collections, research materials, and playable classic arcade, console, and PC titles.
+    url: https://netmarblegamemuseum.org/en
+    logo: assets/logos/netmarble-game-museum.png
+    logo_alt: Netmarble Game Museum logo
+    continent: asia
+    visitable: true
+
   - name: The Strong National Museum of Play
     description: Rochester, NY museum devoted to the history of play, with extensive collections and research including video games.
     url: https://www.museumofplay.org
@@ -146,11 +154,35 @@ organizations:
     continent: europe
     visitable: true
 
+  - name: The Retro Collective
+    description: Hands-on vintage technology museums in Stroud, UK, including The Cave and Arcade Archive, with public sessions and venue hire across 50 years of gaming history.
+    url: https://www.retrocollective.co.uk/
+    logo: assets/logos/retro-collective.png
+    logo_alt: The Retro Collective logo
+    continent: europe
+    visitable: true
+
   - name: National Videogame Museum (USA)
     description: Frisco, Texas museum preserving video game history through interactive exhibits and educational programs.
     url: https://nvmusa.org
     logo: assets/logos/nvm-usa.png
     logo_alt: National Videogame Museum logo
+    continent: north-america
+    visitable: true
+
+  - name: Canadian Video Game Museum
+    description: Nonprofit sharing Canadian video game history through pop-up exhibits and events, including seasonal installations such as Press Start at the Museum of Vancouver.
+    url: https://cvgm.ca/
+    logo: assets/logos/cvgm.png
+    logo_alt: Canadian Video Game Museum logo
+    continent: north-america
+    visitable: true
+
+  - name: Manitoba Computer & Gaming Museum
+    description: Manitoba nonprofit preserving vintage computers and retro games through touring exhibitions, workshops, lectures, and province-wide pop-up events.
+    url: https://mcgmuseum.ca/
+    logo: assets/logos/manitoba-computer-gaming-museum.png
+    logo_alt: Manitoba Computer & Gaming Museum logo
     continent: north-america
     visitable: true
 
@@ -432,6 +464,13 @@ resources:
     url: https://stemtoto.org/work/african-games-database
     logo: assets/logos/african-digital-games-database.png
     logo_alt: African Digital Games Database logo
+    category: database
+
+  - name: Commodore 64 Preservation Project
+    description: Community disk database and hardware registry for Commodore 64 preservation, cataloging verified disk images and serial numbers.
+    url: https://rittwage.com/c64pp/
+    logo: assets/logos/c64-preservation-project.png
+    logo_alt: Commodore 64 Preservation Project logo
     category: database
 
   - name: GC Saves
