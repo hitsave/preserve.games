@@ -1,6 +1,8 @@
 (function () {
     const pages = document.querySelectorAll('.page');
     const navLinks = document.querySelectorAll('[data-nav]');
+    const siteHeader = document.querySelector('.site-header');
+    const navToggle = document.querySelector('.nav-toggle');
     const siteTitle = document.body.dataset.siteTitle || 'preserve.games';
     const routes = new Set(['home', 'organizations', 'visit-in-person', 'guides', 'communities', 'opensource', 'resources', 'browse']);
 
@@ -49,6 +51,19 @@
         return routes.has(hash) ? hash : 'home';
     }
 
+    function setNavOpen(open) {
+        if (!siteHeader || !navToggle) {
+            return;
+        }
+        siteHeader.classList.toggle('is-nav-open', open);
+        navToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        navToggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    }
+
+    function closeNav() {
+        setNavOpen(false);
+    }
+
     function showPage(route) {
         pages.forEach(page => {
             page.hidden = page.dataset.page !== route;
@@ -60,7 +75,24 @@
 
         document.title = pageTitles[route] || siteTitle;
         window.scrollTo(0, 0);
+        closeNav();
     }
+
+    if (navToggle) {
+        navToggle.addEventListener('click', () => {
+            setNavOpen(!siteHeader.classList.contains('is-nav-open'));
+        });
+    }
+
+    navLinks.forEach(link => {
+        link.addEventListener('click', closeNav);
+    });
+
+    window.addEventListener('keydown', event => {
+        if (event.key === 'Escape') {
+            closeNav();
+        }
+    });
 
     window.addEventListener('hashchange', () => showPage(getRoute()));
 
