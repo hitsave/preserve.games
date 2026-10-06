@@ -9,8 +9,17 @@
 <body data-site-title="preserve.games - Video Game Preservation Portal">
     <div class="container">
         <header class="site-header">
-            <a href="#home" class="brand">preserve.games</a>
-            <nav class="nav">
+            <div class="site-header-bar">
+                <a href="#home" class="brand">preserve.games</a>
+                <button type="button" class="nav-toggle" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+                    <span class="nav-toggle-icon" aria-hidden="true">
+                        <span class="nav-toggle-bar"></span>
+                        <span class="nav-toggle-bar"></span>
+                        <span class="nav-toggle-bar"></span>
+                    </span>
+                </button>
+            </div>
+            <nav class="nav" id="site-nav" aria-label="Main">
                 <a href="#organizations" class="button nav-button" data-nav="organizations">Organizations</a>
                 <a href="#visit-in-person" class="button nav-button" data-nav="visit-in-person">Visit in Person</a>
                 <a href="#guides" class="button nav-button" data-nav="guides">Guides</a>
