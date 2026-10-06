@@ -202,6 +202,14 @@ organizations:
     continent: north-america
     visitable: true
 
+  - name: Chicago Gamespace
+    description: Chicago 501(c)(3) museum highlighting local game development past and present, with public outreach and programs for donated development materials.
+    url: https://www.chicagogamespace.com/
+    logo: assets/logos/chicago-gamespace.webp
+    logo_alt: Chicago Gamespace logo
+    continent: north-america
+    visitable: true
+
   - name: Sound and Vision (Beeld & Geluid)
     description: The Netherlands Institute for Sound and Vision with game-related collections.
     url: https://www.beeldengeluid.nl
