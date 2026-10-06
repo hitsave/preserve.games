@@ -148,24 +148,37 @@ body {
     animation: fade-up 0.6s ease both;
 }
 
-.hero-title {
-    font-size: clamp(2.75rem, 8vw, 4.5rem);
-    font-weight: 800;
-    line-height: 1.05;
-    background: linear-gradient(135deg, var(--primary-gradient-start), var(--primary-gradient-end));
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    margin-bottom: 0.75rem;
-    filter: drop-shadow(0 0 40px rgba(255, 139, 210, 0.25));
+.hero-tagline {
+    display: flex;
+    flex-direction: column;
+    gap: 0.15em;
+    font-size: clamp(2.25rem, 6.5vw, 3.75rem);
+    font-weight: 700;
+    line-height: 1.15;
+    color: var(--text-primary);
+    margin-bottom: 1.75rem;
     animation: fade-up 0.6s ease 0.1s both;
 }
 
-.hero-subtitle {
+.hero-tagline-line {
+    display: block;
+}
+
+.hero-blurb {
     color: var(--text-secondary);
-    font-size: 1.25rem;
-    margin-bottom: 2rem;
+    font-size: 1.125rem;
+    max-width: 42rem;
+    margin: 0 auto 2.5rem;
+    line-height: 1.8;
     animation: fade-up 0.6s ease 0.2s both;
+}
+
+.hero-blurb p {
+    margin: 0 0 1rem;
+}
+
+.hero-blurb p:last-child {
+    margin-bottom: 0;
 }
 
 .hero-stats {
@@ -173,8 +186,8 @@ body {
     flex-wrap: wrap;
     justify-content: center;
     gap: 0.75rem;
-    margin-bottom: 2.5rem;
-    animation: fade-up 0.6s ease 0.3s both;
+    margin-top: 2.5rem;
+    animation: fade-up 0.6s ease 0.5s both;
 }
 
 .hero-stat {
@@ -208,11 +221,11 @@ body {
 
 .marquee-wrap {
     width: 100vw;
-    margin: 0 calc(50% - 50vw) 2.5rem;
+    margin: 0 calc(50% - 50vw);
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
-    animation: fade-up 0.6s ease 0.4s both;
+    animation: fade-up 0.6s ease 0.35s both;
 }
 
 .marquee-wrap:hover .logo-marquee-track.is-ready {
@@ -295,6 +308,10 @@ body {
     padding: 4px;
 }
 
+.marquee-logo[src*="gamesradar"] {
+    background: #000000;
+}
+
 .marquee-logo[src*="duckstation"],
 .marquee-logo[src*="dolphin"] {
     background: transparent;
@@ -308,6 +325,16 @@ body {
 .marquee-logo[src$=".gif"],
 .marquee-logo[src$=".ico"] {
     border-radius: 6px;
+}
+
+.marquee-logo[src*="vgpc"],
+.marquee-logo[src*="gaming-alexandria"],
+.marquee-logo[src*="dumping-union"],
+.marquee-logo[src*="gamesradar"] {
+    width: auto;
+    min-width: 100px;
+    max-width: 160px;
+    height: 36px;
 }
 
 .marquee-name {
@@ -335,8 +362,8 @@ body {
 @media (prefers-reduced-motion: reduce) {
     .logo-marquee-track,
     .hero-eyebrow,
-    .hero-title,
-    .hero-subtitle,
+    .hero-tagline,
+    .hero-blurb,
     .hero-stats,
     .marquee-wrap {
         animation: none;
@@ -349,7 +376,6 @@ body {
     max-width: 900px;
     margin: 0 auto 2rem;
     line-height: 1.8;
-    animation: fade-up 0.6s ease 0.5s both;
 }
 
 .hero-actions {
@@ -473,6 +499,33 @@ section h2 {
     min-width: 240px;
 }
 
+.filter-results {
+    flex-basis: 100%;
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+    text-align: center;
+}
+
+.card-badge {
+    align-self: flex-start;
+    display: inline-block;
+    margin-bottom: 0.75rem;
+    padding: 0.2rem 0.55rem;
+    border-radius: 999px;
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid var(--border-color);
+}
+
+.card-browse .card-logo {
+    margin-bottom: 0.75rem;
+}
+
 /* Card styles */
 .card {
     background:
@@ -541,6 +594,13 @@ section h2 {
     box-shadow: none;
 }
 
+.card-logo[src*="gamesradar"] {
+    background: #000000;
+    width: 100%;
+    max-height: 56px;
+    padding: 8px 12px;
+}
+
 .card-logo[src$=".png"],
 .card-logo[src$=".jpg"],
 .card-logo[src$=".jpeg"],
@@ -568,12 +628,48 @@ section h2 {
 
 /* Section spacing */
 .organizations,
+.visit-in-person,
 .guides,
-.databases,
+.communities,
 .opensource,
 .resources,
-.unreleased {
+.browse {
     margin-bottom: 5rem;
+}
+
+.page-lead {
+    color: var(--text-secondary);
+    margin: -0.5rem 0 1.5rem;
+    max-width: 42rem;
+    line-height: 1.7;
+}
+
+.suggest-block {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    line-height: 1.7;
+    max-width: 42rem;
+    margin: -0.25rem auto 1.75rem;
+    text-align: center;
+}
+
+.suggest-block a {
+    color: var(--text-primary);
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.suggest-block a:hover {
+    text-decoration: underline;
+}
+
+footer .suggest-block {
+    max-width: none;
+    margin: 0 0 1rem;
+}
+
+.resources .suggest-block {
+    margin-top: 0;
 }
 
 /* Footer */
@@ -646,11 +742,12 @@ footer {
     }
 
     .organizations,
+    .visit-in-person,
     .guides,
-    .databases,
+    .communities,
     .opensource,
     .resources,
-    .unreleased {
+    .browse {
         margin-bottom: 3rem;
     }
 }
