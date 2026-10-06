@@ -494,6 +494,13 @@ resources:
     logo_alt: Keitai Wiki logo
     category: wiki
 
+  - name: FamiWiki
+    description: English-language wiki documenting Nintendo Famicom and Super Famicom hardware and software for collectors and researchers.
+    url: https://famiwiki.net/
+    logo: assets/logos/famiwiki.ico
+    logo_alt: FamiWiki logo
+    category: wiki
+
   - name: StrategyWiki
     description: A collaborative wiki cataloguing gameplay, mechanics, and structure across thousands of games.
     url: https://strategywiki.org/
