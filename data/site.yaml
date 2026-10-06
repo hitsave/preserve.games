@@ -69,11 +69,11 @@ organizations:
     logo_alt: MO5 logo
     continent: europe
 
-  - name: Herní Historie
-    description: A Czech initiative focused on documenting and preserving the history of video games and their cultural impact.
-    url: https://hernihistorie.cz
-    logo: assets/logos/herni.png
-    logo_alt: Herní Historie logo
+  - name: Czechoslovak Game Archive
+    description: A Czech and Slovak initiative focused on documenting and preserving the history of video games and their cultural impact.
+    url: https://herniarchiv.cz/en/
+    logo: assets/logos/czechoslovak-game-archive.svg
+    logo_alt: Czechoslovak Game Archive logo
     continent: europe
 
   - name: Bibliothèque nationale de France (BnF)
