@@ -411,6 +411,12 @@ communities:
     logo: assets/logos/flashpoint.png
     logo_alt: Flashpoint Archive logo
 
+  - name: XLink Kai
+    description: Free global network gaming community and software for system-link and LAN-era consoles, enabling online play for classics on PlayStation 2, Xbox, and more.
+    url: https://www.teamxlink.co.uk/
+    logo: assets/logos/xlink-kai.jpg
+    logo_alt: XLink Kai logo
+
 resource_categories:
   - { id: all, label: All }
   - { id: database, label: Databases }
@@ -488,6 +494,34 @@ resources:
     logo_alt: GC Saves logo
     category: database
 
+  - name: Delisted Games
+    description: Database tracking delisted digital games and documenting why they are no longer available to buy or play.
+    url: https://delistedgames.com/
+    logo: assets/logos/delisted-games.png
+    logo_alt: Delisted Games logo
+    category: database
+
+  - name: Svensk mediedatabas (SMDB)
+    description: National Library of Sweden search index for Swedish media, including games in the multimedia collections.
+    url: https://smdb.kb.se/smdb/english
+    logo: assets/logos/smdb.png
+    logo_alt: Svensk mediedatabas (SMDB) logo
+    category: database
+
+  - name: The Cover Project
+    description: Community database of scanned video game box art and cover artwork.
+    url: https://www.thecoverproject.net/
+    logo: assets/logos/the-cover-project.png
+    logo_alt: The Cover Project logo
+    category: database
+
+  - name: The Video Game Library
+    description: Database of books about video games for bibliographic research and reading lists.
+    url: https://www.thevideogamelibrary.org/
+    logo: assets/logos/the-video-game-library.ico
+    logo_alt: The Video Game Library logo
+    category: database
+
   - name: The Cutting Room Floor (TCRF)
     description: A wiki documenting unused, hidden, and cut content found in video games through datamining and research.
     url: https://tcrf.net
@@ -507,6 +541,13 @@ resources:
     url: https://famiwiki.net/
     logo: assets/logos/famiwiki.ico
     logo_alt: FamiWiki logo
+    category: wiki
+
+  - name: PC Gaming Wiki
+    description: Community wiki documenting PC games and how to fix issues running them on modern hardware and operating systems.
+    url: https://www.pcgamingwiki.com/wiki/Home
+    logo: assets/logos/pc-gaming-wiki.png
+    logo_alt: PC Gaming Wiki logo
     category: wiki
 
   - name: StrategyWiki
@@ -537,6 +578,20 @@ resources:
     logo_alt: VGHF Digital Archive logo
     category: archives
 
+  - name: GameFAQs
+    description: Long-running community archive of player-contributed walkthroughs, FAQs, and guides.
+    url: https://gamefaqs.gamespot.com/
+    logo: assets/logos/gamefaqs.png
+    logo_alt: GameFAQs logo
+    category: archives
+
+  - name: Video Game Research Library
+    description: Curated collection of links to articles and resources on video game history and research.
+    url: https://videogameresearchlibrary.com/
+    logo: assets/logos/video-game-research-library.jpg
+    logo_alt: Video Game Research Library logo
+    category: archives
+
   - name: Hidden Palace
     description: Archives and publishes video game prototypes, betas, prereleases, and other rare development material.
     url: https://hiddenpalace.org
@@ -556,6 +611,13 @@ resources:
     url: http://www.lostlevels.org/
     logo: assets/logos/lost-levels.png
     logo_alt: Lost Levels logo
+    category: unreleased
+
+  - name: Luckless Heaven
+    description: Independent, in-progress Nintendo reference covering hardware, development systems, and first-party software, with regional game lists and deep-dive research articles.
+    url: https://www.lucklessheaven.com/
+    logo: assets/logos/luckless-heaven.png
+    logo_alt: Luckless Heaven logo
     category: unreleased
 
   - name: BetaArchive
