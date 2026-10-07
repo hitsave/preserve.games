@@ -417,6 +417,12 @@ communities:
     logo: assets/logos/xlink-kai.jpg
     logo_alt: XLink Kai logo
 
+  - name: Pretendo
+    description: Open-source custom servers for Wii U and Nintendo 3DS games, helping players access online features after official Nintendo Network shutdown.
+    url: https://pretendo.network/
+    logo: assets/logos/pretendo.ico
+    logo_alt: Pretendo logo
+
 resource_categories:
   - { id: all, label: All }
   - { id: database, label: Databases }
@@ -492,6 +498,20 @@ resources:
     url: https://gc-saves.com/
     logo: assets/logos/gc-saves.png
     logo_alt: GC Saves logo
+    category: database
+
+  - name: MemCard.art
+    description: Gallery and catalog of PlayStation memory card save icons, documenting the tiny pixel art embedded in classic save data.
+    url: https://memcard.art/
+    logo: assets/logos/memcard-art.png
+    logo_alt: MemCard.art logo
+    category: database
+
+  - name: PS2IODB
+    description: Community database of PlayStation 2 memory card save icons, with browsable 3D assets and tools to extract icons from saves and memory cards.
+    url: https://ps2iodb.com/
+    logo: assets/logos/ps2iodb.svg
+    logo_alt: PS2IODB logo
     category: database
 
   - name: Delisted Games
@@ -590,6 +610,13 @@ resources:
     url: https://videogameresearchlibrary.com/
     logo: assets/logos/video-game-research-library.jpg
     logo_alt: Video Game Research Library logo
+    category: archives
+
+  - name: Critical Distance
+    description: Weekly curated roundups of game criticism and writing from academics, developers, and enthusiasts since 2009.
+    url: https://www.critical-distance.com/
+    logo: assets/logos/critical-distance.png
+    logo_alt: Critical Distance logo
     category: archives
 
   - name: Hidden Palace
