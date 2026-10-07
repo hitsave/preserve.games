@@ -383,6 +383,17 @@ body {
     border-radius: 6px;
 }
 
+.marquee-logo[src*="xlink-kai"] {
+    width: auto;
+    min-width: 100px;
+    max-width: 160px;
+    height: 36px;
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 2px 6px;
+    object-fit: contain;
+}
+
 .marquee-logo[src*="vgpc"],
 .marquee-logo[src*="gaming-alexandria"],
 .marquee-logo[src*="dumping-union"],
@@ -655,6 +666,31 @@ section h2 {
     width: 100%;
     max-height: 56px;
     padding: 8px 12px;
+}
+
+.card-logo[src*="xlink-kai"] {
+    background: #ffffff;
+    width: 100%;
+    max-height: 56px;
+    padding: 8px 12px;
+}
+
+.card-logo[src*="smdb"],
+.marquee-logo[src*="smdb"] {
+    width: auto;
+    max-width: 100%;
+    max-height: 36px;
+    min-height: 24px;
+    background: #ffffff;
+    border-radius: 6px;
+    padding: 6px 10px;
+    object-fit: contain;
+}
+
+.marquee-logo[src*="smdb"] {
+    min-width: 120px;
+    max-width: 180px;
+    height: 36px;
 }
 
 .card-logo[src$=".png"],
