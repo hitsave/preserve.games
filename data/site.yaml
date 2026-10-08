@@ -317,6 +317,14 @@ organizations:
     logo_alt: Arcade Planet logo
     continent: europe
 
+  - name: Museo do Videoxogo de Galicia (MUVI)
+    description: Cangas, Galicia museum with public exhibitions, playable hardware, and preservation of Galician video game heritage across 50 years of industry history.
+    url: https://muvi.gal/
+    logo: assets/logos/muvi.png
+    logo_alt: Museo do Videoxogo de Galicia (MUVI) logo
+    continent: europe
+    visitable: true
+
   - name: ACMI
     description: Australia's national museum of screen culture in Melbourne, with major game exhibitions and preservation work.
     url: https://www.acmi.net.au/
@@ -529,6 +537,13 @@ resources:
     logo_alt: Delisted Games logo
     category: database
 
+  - name: DoesItPlay?
+    description: Community project testing physical games and hardware offline, cataloging DRM, download, and server dependencies that affect long-term playability.
+    url: https://www.doesitplay.org/
+    logo: assets/logos/doesitplay.png
+    logo_alt: DoesItPlay? logo
+    category: database
+
   - name: Svensk mediedatabas (SMDB)
     description: National Library of Sweden search index for Swedish media, including games in the multimedia collections.
     url: https://smdb.kb.se/smdb/english
@@ -585,6 +600,13 @@ resources:
     logo_alt: StrategyWiki logo
     category: wiki
 
+  - name: Gallowpedia
+    description: Fan-run MediEvil wiki preserving official website backups, magazine interviews and previews, demo-disc save files, and related series history.
+    url: https://medievil.wiki/w/Gallowpedia
+    logo: assets/logos/gallowpedia.png
+    logo_alt: Gallowpedia logo
+    category: wiki
+
   - name: Internet Archive
     description: Non-profit digital library with vast collections of software, games, manuals, and related media.
     url: https://archive.org/details/software
@@ -632,6 +654,13 @@ resources:
     url: https://hiddenpalace.org
     logo: assets/logos/hidden-palace.png
     logo_alt: Hidden Palace logo
+    category: unreleased
+
+  - name: Games That Weren't
+    description: Long-running archive of unreleased, cancelled, and prototype games across platforms, with developer interviews, research, and recovered builds and materials where possible.
+    url: https://www.gamesthatwerent.com/
+    logo: assets/logos/games-that-werent.ico
+    logo_alt: Games That Weren't logo
     category: unreleased
 
   - name: Unseen64
