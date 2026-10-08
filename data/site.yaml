@@ -325,6 +325,14 @@ organizations:
     continent: oceania
     visitable: true
 
+  - name: National Film and Sound Archive of Australia (NFSA)
+    description: Australia's national audiovisual archive in Canberra, collecting and preserving Australian video games, source materials, and related artefacts, with public galleries and exhibitions.
+    url: https://www.nfsa.gov.au/
+    logo: assets/logos/nfsa.png
+    logo_alt: NFSA logo
+    continent: oceania
+    visitable: true
+
   - name: The Nostalgia Box
     description: Interactive video game console museum in West Perth (City West), open Tue–Sun.
     url: https://thenostalgiabox.com.au/
