@@ -69,6 +69,13 @@ organizations:
     logo_alt: MO5 logo
     continent: europe
 
+  - name: EFGAMP – European Federation of Game Archives, Museums and Preservation Projects
+    description: Non-profit European federation connecting game archives, museums, libraries, and preservation projects, and engaging on EU legal frameworks for game preservation.
+    url: https://efgamp.eu/
+    logo: assets/logos/efgamp.jpg
+    logo_alt: EFGAMP logo
+    continent: europe
+
   - name: Czechoslovak Game Archive
     description: A Czech and Slovak initiative focused on documenting and preserving the history of video games and their cultural impact.
     url: https://herniarchiv.cz/en/
@@ -322,6 +329,14 @@ organizations:
     url: https://muvi.gal/
     logo: assets/logos/muvi.png
     logo_alt: Museo do Videoxogo de Galicia (MUVI) logo
+    continent: europe
+    visitable: true
+
+  - name: LOAD ZX Museum
+    description: Cantanhede, Portugal museum devoted to ZX Spectrum and computing heritage, Portuguese video game history, and community programs including an annual retro game awards event.
+    url: https://loadzx.com/en/
+    logo: assets/logos/load-zx-museum.png
+    logo_alt: LOAD ZX Museum logo
     continent: europe
     visitable: true
 
@@ -607,6 +622,13 @@ resources:
     logo_alt: Gallowpedia logo
     category: wiki
 
+  - name: ConsoleMods Wiki
+    description: Community wiki documenting console hardware, modifications, softmods, and technical reference material for maintenance and preservation.
+    url: https://consolemods.org/wiki/Main_Page
+    logo: assets/logos/consolemods-wiki.png
+    logo_alt: ConsoleMods Wiki logo
+    category: wiki
+
   - name: Internet Archive
     description: Non-profit digital library with vast collections of software, games, manuals, and related media.
     url: https://archive.org/details/software
@@ -647,6 +669,13 @@ resources:
     url: https://www.critical-distance.com/
     logo: assets/logos/critical-distance.png
     logo_alt: Critical Distance logo
+    category: archives
+
+  - name: GOG Preservation Program
+    description: Initiative restoring and maintaining classic PC games for modern systems, with DRM-free offline installers, original manuals and extras, and ongoing compatibility fixes.
+    url: https://www.gog.com/en/gog-preservation-program
+    logo: assets/logos/gog-preservation-program.png
+    logo_alt: GOG Preservation Program logo
     category: archives
 
   - name: Hidden Palace
@@ -752,6 +781,12 @@ opensource:
       url: https://www.scummvm.org/
       logo: assets/logos/scummvm.png
       logo_alt: ScummVM logo
+
+    - name: Ruffle
+      description: Open-source Flash Player emulator for browsers and desktops, preserving access to Flash games and interactive media.
+      url: https://ruffle.rs/
+      logo: assets/logos/ruffle.png
+      logo_alt: Ruffle logo
 
     - name: DuckStation
       description: PlayStation emulator emphasizing accuracy, low overhead, and support for cue/bin and CHD dumps.
