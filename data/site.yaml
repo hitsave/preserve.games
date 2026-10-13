@@ -379,6 +379,14 @@ organizations:
     continent: south-america
     visitable: true
 
+  - name: Museu do Videogame Itinerante
+    description: Brazilian traveling museum offering free public exhibitions of consoles from every era, with in-house hardware maintenance and restoration.
+    url: https://museudovideogame.com/
+    logo: assets/logos/museu-do-videogame-itinerante.png
+    logo_alt: Museu do Videogame Itinerante logo
+    continent: south-america
+    visitable: true
+
   - name: Museo de Informática de la República Argentina (Fundación ICATEC)
     description: Argentine computing-history foundation; its Buenos Aires museum closed in 2022 and donated its collection to Espacio Tec in Bahía Blanca.
     url: https://museodeinformatica.org.ar/
@@ -760,6 +768,13 @@ resources:
     url: https://www.didyouknowgaming.com/
     logo: assets/logos/did-you-know-gaming.jpg
     logo_alt: Did You Know Gaming logo
+    category: news
+
+  - name: Stop Killing Games
+    description: Consumer advocacy campaign pushing legal protections against publishers disabling purchased games, including EU Parliament engagement relevant to long-term access and preservation.
+    url: https://www.stopkillinggames.com/
+    logo: assets/logos/stop-killing-games.png
+    logo_alt: Stop Killing Games logo
     category: news
 
 opensource:
