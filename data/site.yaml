@@ -324,6 +324,14 @@ organizations:
     logo_alt: Arcade Planet logo
     continent: europe
 
+  - name: Museo del Videojuego Arcade Vintage
+    description: Ibi, Alicante museum dedicated to arcade preservation, hardware and software maintenance, and public programming since 2019.
+    url: https://museoarcadevintage.com/
+    logo: assets/logos/arcade-vintage-museum.png
+    logo_alt: Museo del Videojuego Arcade Vintage logo
+    continent: europe
+    visitable: true
+
   - name: Museo do Videoxogo de Galicia (MUVI)
     description: Cangas, Galicia museum with public exhibitions, playable hardware, and preservation of Galician video game heritage across 50 years of industry history.
     url: https://muvi.gal/
